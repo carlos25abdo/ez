@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اليوم الثاني: الدوال والمعادلات المحاسبية | عرض تقديمي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: #fff; margin: 0; padding: 0; height: 100vh; overflow:hidden; }
+  .swiper { width: 100%; height: 100vh; }
+  .swiper-slide { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; text-align: center; }
+  .slide-bg-1 { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); }
+  .slide-bg-2 { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+  .content-box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; max-width: 1000px; width: 100%; text-align: right; box-shadow: 0 20px 40px rgba(0,0,0,0.3); overflow-y:auto; max-height:85vh; }
+  .title-text { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; color: #34d399; border-bottom: 2px solid #059669; padding-bottom:10px; }
+  .theory-box { background: rgba(255, 255, 255, 0.1); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 16px; color: #e2e8f0; font-size:1.1rem; line-height: 1.8; }
+  .step-card { background: rgba(255,255,255,0.05); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: start; }
+  .step-num { background: #059669; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-left: 15px; flex-shrink:0; }
+  .formula-chip { background: #1e293b; color: #34d399; padding: 3px 8px; border-radius: 4px; font-family: Consolas, monospace; font-size: 14px; direction: ltr; display: inline-block; margin: 0 5px; }
+  .swiper-pagination-bullet { background: #fff; opacity: 0.5; }
+  .swiper-pagination-bullet-active { background: #34d399; opacity: 1; }
+  .swiper-button-next, .swiper-button-prev { color: #34d399; }
+  .back-btn { position: absolute; top: 20px; right: 20px; z-index: 100; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+  .back-btn:hover { background: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+<a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-book-open text-7xl text-emerald-400 mb-6"></i>
+      <h1 class="text-5xl font-bold text-white mb-4">اليوم الثاني: الدوال والمعادلات المحاسبية</h1>
+      <p class="text-xl text-emerald-200">Accounting Formulas Mastery</p>
+      <div class="mt-8 bg-emerald-900/50 px-6 py-3 rounded-full text-emerald-100">المحور 3 | تركيز عالٍ</div>
+      <p class="mt-12 text-sm text-slate-400">اسحب لليسار للبدء <i class="fas fa-arrow-left ml-2 animate-bounce"></i></p>
+    </div>
+
+    <!-- Slide 2: BODMAS -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">أولويات العمليات الحسابية (BODMAS)</h2>
+        <div class="theory-box">
+          قبل الغوص في الدوال المعقدة، تذكر أن الإكسيل ينفذ العمليات الحسابية بترتيب صارم.
+        </div>
+        <ul class="text-lg text-right list-decimal pr-6 space-y-2 font-bold">
+          <li>الأقواس (Brackets)</li>
+          <li>الأسس (Orders/Powers)</li>
+          <li>القسمة والضرب (Division & Multiplication) - من اليسار لليمين</li>
+          <li>الجمع والطرح (Addition & Subtraction) - من اليسار لليمين</li>
+        </ul>
+        <div class="mt-4 p-4 bg-slate-900 rounded border border-emerald-500">
+          مثال: <code class="formula-chip">= 5 + 2 * 3</code> النتيجة هي 11 وليس 21. <br>
+          لتعديل الأولوية نستخدم الأقواس: <code class="formula-chip">= (5 + 2) * 3</code> النتيجة 21.
+        </div>
+      </div>
+    </div>
+    
+    <!-- Slide 3: SUMIFS 1 -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">دالة التجميع الشرطي: SUMIFS (شروط نصية)</h2>
+        <div class="theory-box">
+          تعتبر العمود الفقري لأتمتة دفتر الأستاذ والموازين، لأنها تجمع بناءً على 127 شرطاً!
+        </div>
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div>
+            <strong>الهيكل:</strong> <code>=SUMIFS(نطاق_الجمع, نطاق_الشرط1, الشرط1, ...)</code>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div>
+            <strong>مثال نصي:</strong> جمع مصاريف "الإيجار" للفرع "الشمالي".<br>
+            <code class="formula-chip">=SUMIFS(المبالغ, أسماء_الحسابات, "إيجار", الفروع, "الشمالي")</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: SUMIFS 2 -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">SUMIFS (شروط رقمية وتاريخية)</h2>
+        <div class="theory-box">ماذا لو أردنا الجمع بناءً على فترات زمنية أو مبالغ تتجاوز حداً معيناً؟</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-greater-than"></i></span>
+          <div>
+            <strong>شروط رقمية:</strong> جمع الفواتير التي تزيد عن 5000 دولار.<br>
+            <code class="formula-chip">=SUMIFS(المبالغ, المبالغ, ">5000")</code> (لاحظ وضع المعامل بين علامتي تنصيص).
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-calendar"></i></span>
+          <div>
+            <strong>شروط تاريخية:</strong> جمع الإيرادات خلال شهر معين (بين تاريخين).<br>
+            <code class="formula-chip">=SUMIFS(الإيرادات, التواريخ, ">=2026-01-01", التواريخ, "<=2026-01-31")</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: XLOOKUP 1 -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">الجيل الجديد من دوال البحث: XLOOKUP</h2>
+        <div class="theory-box">لماذا تركنا VLOOKUP؟ لأنها تتطلب أن يكون عمود البحث هو العمود الأول، وتتكسر عند إدراج أعمدة جديدة.</div>
+        <div class="bg-slate-900 p-4 rounded text-right mt-4">
+          <strong class="text-emerald-400">الهيكل السحري:</strong><br>
+          <code>=XLOOKUP(ماذا_تبحث, أين_تبحث, ماذا_تريد_أن_يُرجع, ماذا_لو_لم_يجد)</code><br><br>
+          <strong class="text-emerald-400">مثال واقعي:</strong> جلب اسم الحساب بناءً على كوده.<br>
+          <code class="formula-chip">=XLOOKUP(A2, COA!A:A, COA!B:B, "كود خاطئ")</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: XLOOKUP 2 -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">XLOOKUP: البحث التقريبي والعكسي</h2>
+        <div class="theory-box">خصائص متقدمة لا توجد في VLOOKUP العادية.</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-search-plus"></i></span>
+          <div>
+            <strong>البحث التقريبي (شرائح الضرائب):</strong> إذا بحثت عن راتب 5500 ولم تجده، اجلبه للشريحة الأصغر مباشرة.<br>
+            استخدم المعامل الخامس: <code>-1</code>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-arrow-up"></i></span>
+          <div>
+            <strong>البحث من الأسفل للأعلى:</strong> للحصول على "آخر سعر شراء" للمنتج، نبحث من أسفل الجدول لأعلاه.<br>
+            استخدم المعامل السادس: <code>-1</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Nested IF -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">الدالة الشرطية المتداخلة (Nested IF & IFS)</h2>
+        <div class="theory-box">متى نستخدمها؟ عندما يكون لدينا أكثر من احتمالين (مثال: تصنيف أرصدة العملاء إلى ممتاز، جيد، ضعيف).</div>
+        <div class="p-4 bg-slate-900 rounded mb-4 text-right border-r-4 border-yellow-500">
+          <strong class="text-yellow-400 block mb-2">الطريقة القديمة المعقدة (Nested IF):</strong>
+          <code class="formula-chip">=IF(A2>1000, "ممتاز", IF(A2>500, "جيد", "ضعيف"))</code>
+        </div>
+        <div class="p-4 bg-slate-900 rounded text-right border-r-4 border-emerald-500">
+          <strong class="text-emerald-400 block mb-2">الطريقة الحديثة النظيفة (IFS):</strong>
+          <code class="formula-chip">=IFS(A2>1000, "ممتاز", A2>500, "جيد", TRUE, "ضعيف")</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Date Functions -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">دوال الزمن المحاسبية (EOMONTH & TEXT)</h2>
+        <div class="theory-box">الاستحقاقات وتواريخ الإقفال تتطلب تلاعباً بالتواريخ.</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-calendar-alt"></i></span>
+          <div>
+            <strong>EOMONTH (نهاية الشهر):</strong> إيجاد تاريخ نهاية الشهر الحالي أو بعد عدة أشهر.<br>
+            <code class="formula-chip">=EOMONTH(تاريخ_الفاتورة, 0)</code> يُرجع 31/01/2026 مثلاً.<br>
+            <code class="formula-chip">=EOMONTH(تاريخ_الفاتورة, 2)</code> يُرجع نهاية الشهر بعد شهرين!
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-font"></i></span>
+          <div>
+            <strong>TEXT (استخراج اسم الشهر):</strong> لتحويل التاريخ إلى اسم شهر لعمل التقارير المحورية.<br>
+            <code class="formula-chip">=TEXT(تاريخ, "MMMM")</code> يُرجع "يناير".
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-check-circle text-7xl text-emerald-500 mb-6"></i>
+      <h1 class="text-4xl font-bold text-white mb-4">اكتمل اليوم الثاني!</h1>
+      <p class="text-lg text-emerald-200 mb-8">لقد أنهيت دراسة هذا المحور بالتفصيل.</p>
+      <a href="index.html" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-full transition">العودة للجدول الزمني</a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", { keyboard: {enabled: true}, pagination: {el: ".swiper-pagination", clickable: true}, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"} });
+</script>
+</body>
+</html>

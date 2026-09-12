@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اليوم الأول: التأسيس ودليل الحسابات | عرض تقديمي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: #fff; margin: 0; padding: 0; height: 100vh; overflow:hidden; }
+  .swiper { width: 100%; height: 100vh; }
+  .swiper-slide { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; text-align: center; }
+  .slide-bg-1 { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); }
+  .slide-bg-2 { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+  .content-box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; max-width: 1000px; width: 100%; text-align: right; box-shadow: 0 20px 40px rgba(0,0,0,0.3); overflow-y:auto; max-height:85vh; }
+  .title-text { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; color: #34d399; border-bottom: 2px solid #059669; padding-bottom:10px; }
+  .theory-box { background: rgba(255, 255, 255, 0.1); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 16px; color: #e2e8f0; font-size:1.1rem; line-height: 1.8; }
+  .step-card { background: rgba(255,255,255,0.05); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: start; }
+  .step-num { background: #059669; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-left: 15px; flex-shrink:0; }
+  .formula-chip { background: #1e293b; color: #34d399; padding: 3px 8px; border-radius: 4px; font-family: Consolas, monospace; font-size: 14px; direction: ltr; display: inline-block; margin: 0 5px; }
+  .swiper-pagination-bullet { background: #fff; opacity: 0.5; }
+  .swiper-pagination-bullet-active { background: #34d399; opacity: 1; }
+  .swiper-button-next, .swiper-button-prev { color: #34d399; }
+  .back-btn { position: absolute; top: 20px; right: 20px; z-index: 100; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+  .back-btn:hover { background: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+<a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-book-open text-7xl text-emerald-400 mb-6"></i>
+      <h1 class="text-5xl font-bold text-white mb-4">اليوم الأول: التأسيس ودليل الحسابات</h1>
+      <p class="text-xl text-emerald-200">Excel Basics & Chart of Accounts (COA)</p>
+      <div class="mt-8 bg-emerald-900/50 px-6 py-3 rounded-full text-emerald-100">المحوران 1 و 2 | التأسيس المتين</div>
+      <p class="mt-12 text-sm text-slate-400">اسحب لليسار للبدء <i class="fas fa-arrow-left ml-2 animate-bounce"></i></p>
+    </div>
+
+    <!-- Slide 2: Intro -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">مقدمة في المحاسبة المالية</h2>
+        <div class="theory-box">
+          المحاسبة هي "لغة الأعمال". تهدف إلى تسجيل وتصنيف وتلخيص العمليات المالية لتوفير معلومات لمتخذي القرار.
+        </div>
+        <ul class="text-lg text-right list-disc pr-6 space-y-2">
+          <li><strong>المستفيدون الداخليون:</strong> الإدارة، الملاك، الموظفون (لتقييم الأداء).</li>
+          <li><strong>المستفيدون الخارجيون:</strong> المستثمرون، البنوك، الضرائب (لتقييم المخاطر).</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Slide 3: Assets -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">تشريح الأصول (Assets) بالتفصيل</h2>
+        <div class="theory-box">الأصل هو مورد اقتصادي تملكه الشركة، يُتوقع أن يحقق منافع مستقبلية. طبيعتها: مدينة.</div>
+        <div class="grid grid-cols-2 gap-4 text-right text-sm">
+          <div class="bg-slate-800 p-4 rounded">
+            <h3 class="text-emerald-400 font-bold mb-2">الأصول المتداولة (Current)</h3>
+            <p>سهلة التحويل لنقد خلال سنة. مثل: النقدية بالصندوق، البنك، الذمم المدينة، المخزون.</p>
+          </div>
+          <div class="bg-slate-800 p-4 rounded">
+            <h3 class="text-emerald-400 font-bold mb-2">الأصول الثابتة (Non-Current)</h3>
+            <p>تستخدم لعدة سنوات ولا تُشترى للبيع. مثل: المباني، الأراضي، السيارات (تخضع للإهلاك ما عدا الأراضي).</p>
+          </div>
+          <div class="bg-slate-800 p-4 rounded col-span-2">
+            <h3 class="text-emerald-400 font-bold mb-2">الأصول غير الملموسة (Intangible)</h3>
+            <p>ليس لها كيان مادي مثل الشهرة وبراءات الاختراع والبرمجيات.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Liab & Equity -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">الالتزامات وحقوق الملكية</h2>
+        <div class="theory-box">تمثل مصادر تمويل الأصول. الشركة إما تُمول أموالها من الدائنين أو من الملاك. طبيعتها: دائنة.</div>
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div><strong>الالتزامات (الخصوم):</strong> التزام حالي على المنشأة ناتج عن أحداث سابقة. تنقسم لمتداولة (موردين) وطويلة الأجل (قروض بنكية لخمس سنوات).</div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div><strong>حقوق الملكية:</strong> ما يتبقى للملاك بعد سداد الديون. (الأصول - الالتزامات = الملكية). تشمل رأس المال والأرباح المبقاة.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Revenue & Expenses -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">الإيرادات والمصروفات</h2>
+        <div class="theory-box">هما المكونان الأساسيان لقائمة الدخل، ونتيجتهما تحدد الربح أو الخسارة.</div>
+        <div class="grid grid-cols-2 gap-4 text-right">
+          <div class="bg-slate-800 p-4 rounded">
+            <strong class="text-emerald-400 block mb-2">الإيرادات (Revenues)</strong>
+            <p class="text-sm">زيادة في المنافع الاقتصادية. تنقسم إلى: إيراد تشغيلي (من النشاط الأساسي مثل بيع البضاعة) وإيراد غير تشغيلي (بيع سيارة مستعملة).</p>
+          </div>
+          <div class="bg-slate-800 p-4 rounded">
+            <strong class="text-emerald-400 block mb-2">المصروفات (Expenses)</strong>
+            <p class="text-sm">نقص في المنافع الاقتصادية (تكلفة الحصول على الإيراد). تشمل مصاريف إدارية (رواتب) وتسويقية وتمويلية (فوائد القروض).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: COA Structure -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">بنية دليل الحسابات (COA)</h2>
+        <div class="theory-box">يعتمد الدليل على الترتيب العشري لسهولة الإضافة والتوسع مستقبلاً.</div>
+        <ul class="text-right text-lg space-y-3">
+          <li><strong class="text-emerald-400">المستوى الأول (الفئة):</strong> 1=أصول، 2=التزامات، 3=ملكية، 4=إيرادات، 5=مصروفات</li>
+          <li><strong class="text-emerald-400">المستوى الثاني (المجموعة):</strong> 11=أصول متداولة، 12=أصول ثابتة</li>
+          <li><strong class="text-emerald-400">المستوى الثالث (الحساب الرئيسي):</strong> 111=النقدية وما يعادلها</li>
+          <li><strong class="text-emerald-400">المستوى الرابع (الحساب الفرعي):</strong> 1111=صندوق المركز الرئيسي</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slide 7: Excel Data Validation 1 -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">الإكسيل: التحقق من صحة البيانات (متقدم)</h2>
+        <div class="theory-box">كيف نمنع المحاسب من إدخال اسم حساب خاطئ في القيود اليومية؟</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-list"></i></span>
+          <div>
+            <strong>إنشاء قائمة منسدلة مطاطية:</strong> بدلاً من تحديد نطاق ثابت <code>$A$1:$A$10</code>، نستخدم الجداول الذكية (Ctrl+T) ونسمي الجدول، لتصبح القائمة المنسدلة تتوسع آلياً عند إضافة حساب جديد.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Excel Formatting -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">الإكسيل: التنسيق المخصص (Custom Formatting)</h2>
+        <div class="theory-box">المحاسبة لا تستخدم التنسيق العادي للأرقام.</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-money-bill"></i></span>
+          <div>
+            <strong>تنسيق السالب بين قوسين:</strong> المحاسبون يفضلون (1,500) على -1500. <br>
+            الكود السري للتنسيق (Ctrl+1 > Custom): <code class="formula-chip">#,##0.00;(#,##0.00)</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-check-circle text-7xl text-emerald-500 mb-6"></i>
+      <h1 class="text-4xl font-bold text-white mb-4">اكتمل اليوم الأول!</h1>
+      <p class="text-lg text-emerald-200 mb-8">لقد أنهيت دراسة هذا المحور بالتفصيل.</p>
+      <a href="index.html" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-full transition">العودة للجدول الزمني</a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", { keyboard: {enabled: true}, pagination: {el: ".swiper-pagination", clickable: true}, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"} });
+</script>
+</body>
+</html>

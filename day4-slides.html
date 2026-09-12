@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اليوم الرابع: ميزان المراجعة الآلي | عرض تقديمي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: #fff; margin: 0; padding: 0; height: 100vh; overflow:hidden; }
+  .swiper { width: 100%; height: 100vh; }
+  .swiper-slide { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; text-align: center; }
+  .slide-bg-1 { background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); }
+  .slide-bg-2 { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+  .content-box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; max-width: 1000px; width: 100%; text-align: right; box-shadow: 0 20px 40px rgba(0,0,0,0.3); overflow-y:auto; max-height:85vh; }
+  .title-text { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; color: #34d399; border-bottom: 2px solid #059669; padding-bottom:10px; }
+  .theory-box { background: rgba(255, 255, 255, 0.1); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 16px; color: #e2e8f0; font-size:1.1rem; line-height: 1.8; }
+  .step-card { background: rgba(255,255,255,0.05); border-right: 4px solid #059669; padding: 15px; border-radius: 8px; margin-bottom: 12px; display: flex; align-items: start; }
+  .step-num { background: #059669; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-left: 15px; flex-shrink:0; }
+  .formula-chip { background: #1e293b; color: #34d399; padding: 3px 8px; border-radius: 4px; font-family: Consolas, monospace; font-size: 14px; direction: ltr; display: inline-block; margin: 0 5px; }
+  .swiper-pagination-bullet { background: #fff; opacity: 0.5; }
+  .swiper-pagination-bullet-active { background: #34d399; opacity: 1; }
+  .swiper-button-next, .swiper-button-prev { color: #34d399; }
+  .back-btn { position: absolute; top: 20px; right: 20px; z-index: 100; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+  .back-btn:hover { background: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+<a href="index.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-balance-scale text-7xl text-emerald-400 mb-6"></i>
+      <h1 class="text-5xl font-bold text-white mb-4">اليوم الرابع: ميزان المراجعة الآلي</h1>
+      <p class="text-xl text-emerald-200">Automated Trial Balance</p>
+      <div class="mt-8 bg-emerald-900/50 px-6 py-3 rounded-full text-emerald-100">المحور 5 | الأتمتة المحاسبية</div>
+      <p class="mt-12 text-sm text-slate-400">اسحب لليسار للبدء <i class="fas fa-arrow-left ml-2 animate-bounce"></i></p>
+    </div>
+
+    <!-- Slide 2: Types of Trial Balance -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">أنواع موازين المراجعة</h2>
+        <div class="theory-box">لا يوجد شكل واحد للميزان، المحاسب يختار ما يناسب تقاريره.</div>
+        <div class="grid grid-cols-2 gap-4 text-right">
+          <div class="bg-slate-800 p-4 border-r-4 border-emerald-500 rounded">
+            <strong class="block mb-2 text-emerald-400">1. ميزان المراجعة بالمجاميع</strong>
+            <p>يُظهر إجمالي الحركات المدينة وإجمالي الحركات الدائنة لكل حساب خلال الفترة دون إظهار الرصيد الصافي.</p>
+          </div>
+          <div class="bg-slate-800 p-4 border-r-4 border-emerald-500 rounded">
+            <strong class="block mb-2 text-emerald-400">2. ميزان المراجعة بالأرصدة</strong>
+            <p>يُظهر الرصيد النهائي فقط لكل حساب (إما مدين أو دائن). وهو المعتمد لإعداد القوائم المالية.</p>
+          </div>
+          <div class="bg-slate-800 p-4 border-r-4 border-emerald-500 rounded col-span-2">
+            <strong class="block mb-2 text-emerald-400">3. ميزان المراجعة الشامل (المفضل)</strong>
+            <p>يحتوي على 6 أعمدة أرقام: رصيد افتتاحي (مدين/دائن) + حركات (مدين/دائن) + رصيد ختامي (مدين/دائن). وهو ما سنبنيه في الإكسيل.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Hidden Errors -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">أخطاء لا يكتشفها ميزان المراجعة!</h2>
+        <div class="theory-box">توازن الميزان (مدين = دائن) لا يعني بالضرورة أن عملك صحيح 100%. هناك أخطاء خفية:</div>
+        <ul class="text-right text-lg space-y-4">
+          <li><i class="fas fa-eye-slash text-red-400 ml-2"></i> <strong>أخطاء السهو:</strong> نسيان تسجيل قيد بالكامل في اليومية.</li>
+          <li><i class="fas fa-balance-scale-right text-red-400 ml-2"></i> <strong>أخطاء متكافئة:</strong> تسجيل رقم 5000 بالخطأ بدلاً من 500 في كلا الطرفين المدين والدائن.</li>
+          <li><i class="fas fa-random text-red-400 ml-2"></i> <strong>أخطاء التوجيه المحاسبي:</strong> جعل حساب "السيارات" مديناً بدلاً من "مصاريف الصيانة".</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Slide 4: Excel Building 1 -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">بناء الميزان خطوة بخطوة (جلب الأرصدة)</h2>
+        <div class="theory-box">نريد أن يُبنى الميزان آلياً بمجرد إدخال القيد في اليومية.</div>
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div>
+            <strong>الحركات المدينة:</strong> <code class="formula-chip">=SUMIFS(Journal!Debit, Journal!Code, [@Code])</code>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div>
+            <strong>الحركات الدائنة:</strong> <code class="formula-chip">=SUMIFS(Journal!Credit, Journal!Code, [@Code])</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Excel Building 2 -->
+    <div class="swiper-slide slide-bg-1">
+      <div class="content-box">
+        <h2 class="title-text">بناء الميزان (الرصيد الختامي)</h2>
+        <div class="theory-box">لحساب الرصيد الختامي الصافي لكل حساب:</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-brain text-emerald-300"></i></span>
+          <div>
+            <strong>الرصيد الكلي للحساب = </strong> (افتتاحي مدين + حركات مدينة) - (افتتاحي دائن + حركات دائنة).
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div>
+            <strong>عمود المدين الختامي:</strong> <code class="formula-chip">=IF(الرصيد_الكلي > 0, الرصيد_الكلي, 0)</code> <br>
+            <span class="text-sm">إذا كان الرقم موجباً، فضعه هنا، وإلا ضع صفراً.</span>
+          </div>
+        </div>
+        <div class="step-card">
+          <span class="step-num">4</span>
+          <div>
+            <strong>عمود الدائن الختامي:</strong> <code class="formula-chip">=IF(الرصيد_الكلي < 0, ABS(الرصيد_الكلي), 0)</code> <br>
+            <span class="text-sm">إذا كان سالباً (طبيعته دائنة)، حوّله لموجب باستخدام ABS وضعه هنا.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Visual Warnings -->
+    <div class="swiper-slide slide-bg-2">
+      <div class="content-box">
+        <h2 class="title-text">تنبيهات بصرية (Conditional Formatting)</h2>
+        <div class="theory-box">كيف نجعل الإكسيل يصرخ في وجهنا إذا أخطأنا؟</div>
+        <div class="step-card">
+          <span class="step-num"><i class="fas fa-paint-brush"></i></span>
+          <div>
+            حدد خلية التوازن أسفل الميزان.<br>
+            اذهب إلى Conditional Formatting > New Rule > Use a formula.<br>
+            اكتب: <code class="formula-chip">=$G$100<>$H$100</code> (أي خلية مجموع المدين لا تساوي الدائن).<br>
+            اختر Format واجعل لون التعبئة أحمر والخط أبيض عريض.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-slide slide-bg-1">
+      <i class="fas fa-check-circle text-7xl text-emerald-500 mb-6"></i>
+      <h1 class="text-4xl font-bold text-white mb-4">اكتمل اليوم الرابع!</h1>
+      <p class="text-lg text-emerald-200 mb-8">لقد أنهيت دراسة هذا المحور بالتفصيل.</p>
+      <a href="index.html" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-full transition">العودة للجدول الزمني</a>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", { keyboard: {enabled: true}, pagination: {el: ".swiper-pagination", clickable: true}, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"} });
+</script>
+</body>
+</html>

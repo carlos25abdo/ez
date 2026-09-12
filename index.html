@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة المحاسبة الاحترافية | أ. عبدالرحمن خليل | الخطة الزمنية</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-400-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/tajawal@latest/arabic-700-normal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  .swiper-button-next:after, .swiper-button-prev:after { font-size: 20px !important; font-weight: bold; }
+  .swiper-pagination-bullet-active { background: #059669 !important; }
+</style>
+<style>
+  :root{
+    --navy:#0f172a;
+    --emerald:#059669;
+    --excel:#107c41;
+  }
+  *{font-family:'Tajawal',sans-serif;}
+  body{background:#f1f5f9;color:#0f172a;}
+  .sidebar{background:linear-gradient(180deg,#0f172a 0%,#1e293b 100%);}
+  .nav-item{transition:all .3s;border-right:3px solid transparent;}
+  .nav-item:hover{background:rgba(5,150,105,.15);border-right-color:#059669;}
+  .nav-item.active{background:rgba(5,150,105,.2);border-right-color:#059669;color:#34d399;}
+  .hero-gradient{background:linear-gradient(135deg,#0f172a 0%,#064e3b 50%,#107c41 100%);}
+  .card-hover{transition:all .3s;}
+  .card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(15,23,42,.15);}
+  .excel-wrap{border:1px solid #c4c4c4;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08);}
+  .excel-ribbon{background:#107c41;color:#fff;padding:8px 14px;display:flex;align-items:center;gap:10px;font-size:13px;}
+  .formula-bar{display:flex;align-items:center;background:#fff;border-bottom:1px solid #d4d4d4;padding:4px 8px;gap:8px;font-size:13px;}
+  .formula-bar .name-box{background:#fff;border:1px solid #bfbfbf;padding:4px 8px;width:70px;text-align:center;font-weight:600;}
+  .formula-bar .fx{color:#666;font-style:italic;padding:0 6px;}
+  .formula-bar input{flex:1;border:1px solid #bfbfbf;padding:4px 8px;font-family:Consolas,monospace;direction:ltr;}
+  .excel-grid{overflow:auto;max-height:420px;}
+  .excel-grid table{border-collapse:collapse;width:max-content;direction:ltr;}
+  .excel-grid th{background:#f0f0f0;border:1px solid #d4d4d4;padding:4px 10px;font-weight:600;font-size:12px;color:#333;position:sticky;top:0;z-index:2;}
+  .excel-grid th.row-num{position:sticky;right:0;z-index:3;background:#f0f0f0;min-width:40px;}
+  .excel-grid th.corner{position:sticky;right:0;top:0;z-index:4;background:#e5e5e5;}
+  .excel-grid td{border:1px solid #e0e0e0;padding:4px 8px;min-width:110px;font-size:13px;background:#fff;}
+  .excel-grid td.row-num{background:#f0f0f0;text-align:center;font-weight:600;position:sticky;right:0;z-index:1;min-width:40px;}
+  .excel-grid td.header-cell{background:#d9ead3;font-weight:600;color:#0f172a;}
+  .excel-grid td.num{direction:ltr;text-align:right;font-family:Consolas,monospace;}
+  .excel-grid td.acc{direction:ltr;text-align:right;font-family:Consolas,monospace;}
+  .excel-grid td.acc.neg{color:#c00;}
+  .excel-status{background:#107c41;color:#fff;padding:4px 12px;font-size:12px;display:flex;justify-content:space-between;}
+  .formula-chip{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;padding:6px 12px;border-radius:6px;font-family:Consolas,monospace;direction:ltr;display:inline-block;margin:4px 0;font-size:13px;}
+  .tab-btn{padding:10px 20px;background:#e5e7eb;border-radius:8px 8px 0 0;cursor:pointer;font-weight:600;transition:all .2s;}
+  .tab-btn.active{background:#107c41;color:#fff;}
+  .step-card{background:#fff;border-right:4px solid #059669;padding:16px 20px;border-radius:8px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+  .step-num{background:#059669;color:#fff;width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-left:10px;}
+  .download-btn{background:linear-gradient(135deg,#107c41,#059669);color:#fff;padding:10px 20px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;font-weight:600;transition:all .3s;}
+  .download-btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(16,124,65,.3);}
+  .section-title{border-right:4px solid #059669;padding-right:12px;margin-bottom:16px;}
+  .theory-box{background:linear-gradient(135deg,#ecfdf5 0%,#f0fdf4 100%);border-right:4px solid #059669;padding:20px;border-radius:8px;margin-bottom:16px;}
+  .warning-box{background:#fef3c7;border-right:4px solid #f59e0b;padding:16px;border-radius:8px;margin:12px 0;}
+  .info-box{background:#dbeafe;border-right:4px solid #2563eb;padding:16px;border-radius:8px;margin:12px 0;}
+  details{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;margin-bottom:8px;}
+  details summary{cursor:pointer;font-weight:700;color:#0f172a;list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary:before{content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;margin-left:8px;color:#059669;transition:transform .2s;display:inline-block;}
+  details[open] summary:before{transform:rotate(180deg);}
+  .scroll-top{position:fixed;bottom:20px;left:20px;background:#059669;color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:100;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+  .fade-in{animation:fadeIn .4s ease;}
+  .shortcut-key{background:#0f172a;color:#34d399;padding:3px 8px;border-radius:4px;font-family:Consolas,monospace;font-size:12px;margin:0 2px;direction:ltr;display:inline-block;}
+
+  /* ===== Schedule Cards ===== */
+  .schedule-hero{background:linear-gradient(135deg,#0f172a 0%,#064e3b 60%,#107c41 100%);position:relative;overflow:hidden;}
+  .schedule-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(16,184,129,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(52,211,153,.1) 0%,transparent 50%);}
+  .day-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(15,23,42,.08);transition:all .4s;border:1px solid #e5e7eb;position:relative;}
+  .day-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(15,23,42,.15);}
+  .day-header{padding:20px;color:#fff;position:relative;overflow:hidden;}
+  .day-header::after{content:'';position:absolute;top:-30px;left:-30px;width:120px;height:120px;background:rgba(255,255,255,.08);border-radius:50%;}
+  .day-num{font-size:3rem;font-weight:900;line-height:1;opacity:.9;}
+  .day-label{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;opacity:.8;}
+  .day-body{padding:20px;}
+  .session-block{background:#f8fafc;border-right:3px solid;padding:12px 14px;border-radius:8px;margin-bottom:10px;transition:all .2s;}
+  .session-block:hover{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+  .session-time{font-family:Consolas,monospace;font-size:11px;background:rgba(0,0,0,.08);padding:2px 8px;border-radius:4px;display:inline-block;}
+  .progress-ring{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:#fff;position:relative;}
+  .progress-ring::before{content:'';position:absolute;inset:4px;background:#fff;border-radius:50%;}
+  .progress-ring span{position:relative;z-index:2;color:inherit;}
+  .day-badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.3);}
+  .tip-box{background:linear-gradient(135deg,#fef3c7,#fde68a);border-right:4px solid #f59e0b;padding:12px 16px;border-radius:8px;margin-top:12px;font-size:13px;}
+  .tip-box i{color:#d97706;}
+  .total-stats{background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:16px;padding:24px;color:#fff;position:relative;overflow:hidden;}
+  .total-stats::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(16,184,129,.2),transparent 60%);}
+  .stat-item{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;text-align:center;}
+  .stat-value{font-size:2rem;font-weight:900;background:linear-gradient(135deg,#34d399,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .day-colors-1{background:linear-gradient(135deg,#107c41,#059669);}
+  .day-colors-2{background:linear-gradient(135deg,#0891b2,#0e7490);}
+  .day-colors-3{background:linear-gradient(135deg,#7c3aed,#6d28d9);}
+  .day-colors-4{background:linear-gradient(135deg,#dc2626,#b91c1c);}
+  .day-colors-5{background:linear-gradient(135deg,#ea580c,#c2410c);}
+  .day-colors-6{background:linear-gradient(135deg,#0284c7,#0369a1);}
+  .day-colors-7{background:linear-gradient(135deg,#b45309,#92400e);}
+  .session-color-1{border-color:#107c41;}
+  .session-color-2{border-color:#0891b2;}
+  .session-color-3{border-color:#7c3aed;}
+  .start-day-btn{background:linear-gradient(135deg,#059669,#047857);color:#fff;padding:10px 20px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .3s;width:100%;justify-content:center;}
+  .start-day-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(5,150,105,.4);}
+  .timeline-line{position:absolute;right:29px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#107c41,#059669);opacity:.2;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero-gradient text-white shadow-xl sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap gap-4">
+    <div class="flex items-center gap-4">
+      <div class="bg-white/10 backdrop-blur p-3 rounded-xl">
+        <i class="fas fa-file-excel text-3xl text-emerald-300"></i>
+      </div>
+      <div>
+        <h1 class="text-xl md:text-2xl font-bold">منصة المحاسبة الاحترافية باستخدام Microsoft Excel</h1>
+        <p class="text-emerald-200 text-sm mt-1"><i class="fas fa-chalkboard-teacher ml-1"></i> المدرب المعتمد: <span class="font-bold text-white">أ. عبدالرحمن خليل</span></p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="hidden md:inline-block bg-emerald-600/30 px-3 py-1 rounded-full text-xs"><i class="fas fa-calendar-week"></i> 7 أيام تدريبية</span>
+      <span class="hidden md:inline-block bg-white/10 px-3 py-1 rounded-full text-xs"><i class="fas fa-clock"></i> 10.5 ساعة إجمالاً</span>
+    </div>
+  </div>
+</header>
+
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-6 px-4 py-6">
+
+  <!-- SIDEBAR -->
+  <aside class="md:w-72 flex-shrink-0">
+    <div class="sidebar rounded-2xl shadow-xl p-5 text-white sticky top-28">
+      <div class="flex items-center gap-3 mb-4 pb-4 border-b border-white/10">
+        <div class="bg-emerald-500/20 p-2 rounded-lg"><i class="fas fa-book-open text-emerald-300"></i></div>
+        <div>
+          <div class="text-xs text-emerald-200">التنقل السريع</div>
+          <div class="font-bold">الدورة الكاملة</div>
+        </div>
+      </div>
+      <nav class="space-y-1" id="navMenu">
+        <a href="#schedule" class="nav-item block px-3 py-2 rounded-lg text-sm active" data-target="schedule"><i class="fas fa-calendar-alt ml-2 w-5"></i>الجدول الزمني</a>
+        <div class="border-t border-white/10 my-2"></div>
+        <a href="#axis1" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis1"><i class="fas fa-desktop ml-2 w-5"></i>1. واجهة Excel</a>
+        <a href="#axis2" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis2"><i class="fas fa-database ml-2 w-5"></i>2. البيانات المالية</a>
+        <a href="#axis3" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis3"><i class="fas fa-function ml-2 w-5"></i>3. الدوال المحاسبية</a>
+        <a href="#axis4" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis4"><i class="fas fa-book ml-2 w-5"></i>4. اليومية والأستاذ</a>
+        <a href="#axis5" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis5"><i class="fas fa-balance-scale ml-2 w-5"></i>5. ميزان المراجعة</a>
+        <a href="#axis6" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis6"><i class="fas fa-file-invoice-dollar ml-2 w-5"></i>6. القوائم المالية</a>
+        <a href="#axis7" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis7"><i class="fas fa-chart-pie ml-2 w-5"></i>7. التقارير المحورية</a>
+        <a href="#axis8" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis8"><i class="fas fa-chart-line ml-2 w-5"></i>8. التحليل والرسوم</a>
+        <a href="#axis9" class="nav-item block px-3 py-2 rounded-lg text-sm" data-target="axis9"><i class="fas fa-trophy ml-2 w-5"></i>9. مشروع التخرج</a>
+      </nav>
+      <div class="mt-5 pt-4 border-t border-white/10 text-center">
+        <div class="bg-emerald-500/20 rounded-lg p-3">
+          <i class="fas fa-certificate text-emerald-300 text-2xl"></i>
+          <div class="text-xs mt-1 text-emerald-100">شهادة معتمدة من</div>
+          <div class="font-bold text-sm">أ. عبدالرحمن خليل</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 min-w-0">
+
+    <!-- ================= SCHEDULE SECTION ================= -->
+    <section id="schedule" class="mb-8 fade-in">
+      <!-- Hero Schedule -->
+      <div class="schedule-hero rounded-2xl shadow-2xl p-8 mb-6 text-white relative">
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="bg-white/15 backdrop-blur p-3 rounded-xl">
+              <i class="fas fa-calendar-check text-3xl text-emerald-300"></i>
+            </div>
+            <div>
+              <div class="text-emerald-200 text-sm">الخطة الزمنية المعتمدة</div>
+              <h2 class="text-2xl md:text-3xl font-bold">الجدول الدراسي للدورة</h2>
+            </div>
+          </div>
+          <p class="text-emerald-100 leading-relaxed max-w-3xl">
+            تم توزيع المحاور التسعة على <strong class="text-white">7 أيام تدريبية</strong>، بمعدل <strong class="text-white">ساعة ونصف (90 دقيقة)</strong> يومياً،
+            وفق منهجية علمية متدرجة تأخذ بعين الاعتبار كثافة المحتوى، الترابط بين المحاور، ومستوى التركيز المطلوب.
+            كل يوم مقسّم إلى <strong class="text-white">3 جلسات زمنية</strong> بفاصل استراحة قصير.
+          </p>
+        </div>
+      </div>
+
+      <!-- Total Stats -->
+      <div class="total-stats mb-6">
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="stat-item">
+            <div class="stat-value">7</div>
+            <div class="text-xs text-slate-300 mt-1">أيام تدريبية</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">10.5</div>
+            <div class="text-xs text-slate-300 mt-1">ساعات إجمالية</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">9</div>
+            <div class="text-xs text-slate-300 mt-1">محاور علمية</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">21</div>
+            <div class="text-xs text-slate-300 mt-1">جلسة تطبيقية</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Methodology -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mb-6 border-r-8 border-emerald-600">
+        <h3 class="section-title text-lg font-bold text-emerald-800 mb-4"><i class="fas fa-lightbulb ml-2"></i>منهجية توزيع الأيام</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-emerald-50 rounded-xl p-4 border-r-4 border-emerald-500">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-layer-group text-emerald-600 text-xl"></i>
+              <h4 class="font-bold text-slate-800">التدرج المنطقي</h4>
+            </div>
+            <p class="text-sm text-slate-600">نبدأ بالأساسيات (الواجهة والبيانات) ثم الدوال، ثم ننتقل إلى الدورة المحاسبية الكاملة، ونختم بالتقارير والتحليل.</p>
+          </div>
+          <div class="bg-blue-50 rounded-xl p-4 border-r-4 border-blue-500">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-brain text-blue-600 text-xl"></i>
+              <h4 class="font-bold text-slate-800">توازن الحمل الذهني</h4>
+            </div>
+            <p class="text-sm text-slate-600">المحاور الثقيلة (كالدوال والقوائم المالية) تأخذ يوماً كاملاً، والخفيفة تُدمج معاً لتجنب الإرهاق.</p>
+          </div>
+          <div class="bg-orange-50 rounded-xl p-4 border-r-4 border-orange-500">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-running text-orange-600 text-xl"></i>
+              <h4 class="font-bold text-slate-800">تطبيق فوري</h4>
+            </div>
+            <p class="text-sm text-slate-600">كل يوم ينتهي بتطبيق عملي على ملفات Excel حقيقية، ويوم التخرج مخصص للمشروع الشامل.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Days Slider -->
+      <div class="swiper daysSwiper" style="padding-bottom: 40px; padding-left: 10px; padding-right: 10px;">
+        <div class="swiper-wrapper">
+
+        <!-- ========== اليوم 1 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-1">
+            <div class="day-badge"><i class="fas fa-seedling ml-1"></i> الانطلاقة</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم الأول</div>
+                <div class="day-num">01</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-desktop ml-2"></i>أساسيات Excel وبناء دليل الحسابات</h3>
+            <p class="text-sm opacity-90 mt-1">المحوران 1 + 2 | التأسيس المتين</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>تشريح واجهة Excel المالية:</strong> مكونات الواجهة، شريط الأدوات، تبويبات Ribbon، شريط الصيغة، منطقة العمل. ضبط تنسيق المحاسبة (Accounting Format)، تنسيق السالب بين قوسين <code class="bg-slate-100 px-1 rounded">($1,000.00)</code>.</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>اختصارات المحاسب + تثبيت العناوين:</strong> Alt+= للمجموع، Ctrl+Shift+4 للعملة، Ctrl+1 للتنسيق، Freeze Panes. ثم مقدمة في دليل الحسابات (COA) والترميز العشري (1 أصول، 2 التزامات، 3 حقوق، 4 إيرادات، 5 مصروفات).</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>تطبيق عملي:</strong> بناء دليل حسابات كامل في Excel، تحويله إلى جدول ذكي (Ctrl+T)، إضافة Data Validation وقوائم منسدلة ديناميكية لمنع الأخطاء المطبعية.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> خصّص 10 دقائق بعد الجلسة لمراجعة الاختصارات كتابياً، فهي أساس السرعة في العمل المحاسبي اليومي.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs font-bold">المحور 1</span>
+              <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs font-bold">المحور 2</span>
+            </div>
+            <a href="day1-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم الأول (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 2 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-2">
+            <div class="day-badge"><i class="fas fa-function ml-1"></i> قوة الدوال</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم الثاني</div>
+                <div class="day-num">02</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-square-root-variable ml-2"></i>إتقان الدوال المحاسبية</h3>
+            <p class="text-sm opacity-90 mt-1">المحور 3 | تركيز عالٍ</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>دوال التجميع:</strong> SUM, SUMIF, SUMIFS مع أمثلة محاسبية واقعية (جمع مبيعات فرع معين، مصروفات شهر محدد، حسابات بطبيعة معينة).</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>دوال البحث والربط:</strong> VLOOKUP التقليدي ومقارنته بـ XLOOKUP الحديث لجلب اسم الحساب تلقائياً من دليل الحسابات. الفرق بين البحث التقريبي والدقيق.</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>الرقابة والتحقق:</strong> IF المركبة للقرارات المتسلسلة، IFERROR لمعالجة الأخطاء، التنسيق الشرطي لتظليل الفروقات والقيم الشاذة باللون الأحمر.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> هذا اليوم هو الأصعب نظرياً، لا تنتقل لليوم التالي إلا بعد حل التمارين الثلاثة المرفقة مع الملف.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded text-xs font-bold">المحور 3</span>
+              <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">يوم مركّز</span>
+            </div>
+            <a href="day2-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم الثاني (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 3 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-3">
+            <div class="day-badge"><i class="fas fa-book ml-1"></i> قلب المحاسبة</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم الثالث</div>
+                <div class="day-num">03</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-book-open ml-2"></i>دفتر اليومية والأستاذ العام</h3>
+            <p class="text-sm opacity-90 mt-1">المحور 4 | القيد المزدوج</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>نظرية القيد المزدوج:</strong> مبدأ لوكا باتشولي، قواعد المدين والدائن حسب نوع الحساب، هيكل القيد اليومي (التاريخ، الرقم، الكود، الحساب، البيان، مدين، دائن).</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>بناء اليومية في Excel:</strong> تسجيل 4 قيود واقعية (رأس مال، شراء أصل، سداد مصروف، بيع نقدي وآجل). معادلة التحقق من التوازن: <code class="bg-slate-100 px-1 rounded text-xs">=IF(SUM(D)=SUM(C),"متزن","فارق")</code>.</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>الترحيل للأستاذ:</strong> استخدام SUMIFS لجلب مجاميع كل حساب، حساب الرصيد المتحرك: <code class="bg-slate-100 px-1 rounded text-xs">=رصيد_سابق + مدين - دائن</code>.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> اليوم الثالث هو حجر الأساس، إذا أتقنته ستفهم باقي الدورة بسهولة. كرّر تسجيل القيود 3 مرات على الأقل.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-bold">المحور 4</span>
+              <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-bold">أساسي</span>
+            </div>
+            <a href="day3-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم الثالث (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 4 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-4">
+            <div class="day-badge"><i class="fas fa-balance-scale ml-1"></i> التوازن المالي</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم الرابع</div>
+                <div class="day-num">04</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-balance-scale ml-2"></i>ميزان المراجعة الآلي</h3>
+            <p class="text-sm opacity-90 mt-1">المحور 5 | الأتمتة المحاسبية</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>وظيفة ميزان المراجعة:</strong> الفرق بين ميزان المجاميع وميزان الأرصدة، قبل وبعد التسويات الجردية. أهميته في التحقق من صحة الترحيل.</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>أتمتة ميزان المراجعة:</strong> ربطه تلقائياً بيومية القيود عبر دمج XLOOKUP و SUMIFS. معادلة حساب الرصيد: <code class="bg-slate-100 px-1 rounded text-xs">=IF((افتتاحي_مدين+حركات_مدين-حركات_دائن)>0,...)</code>.</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>تطبيق عملي:</strong> بناء ميزان مراجعة كامل متزن لـ 15 حساباً، مع فحص التوازن النهائي ومعادلة كشف الفروقات.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> تأكد أن ميزان المراجعة يتزن دائماً قبل الانتقال لليوم التالي، لأن أي خطأ هنا سينتقل للقوائم المالية.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">المحور 5</span>
+            </div>
+            <a href="day4-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم الرابع (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 5 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-5">
+            <div class="day-badge"><i class="fas fa-file-invoice-dollar ml-1"></i> المنتج النهائي</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم الخامس</div>
+                <div class="day-num">05</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-file-invoice-dollar ml-2"></i>إعداد القوائم المالية</h3>
+            <p class="text-sm opacity-90 mt-1">المحور 6 | قائمة الدخل + الميزانية</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>قائمة الدخل (Income Statement):</strong> الإيرادات - تكلفة المبيعات = مجمل الربح - المصروفات التشغيلية = صافي الربح. ربطها بميزان المراجعة عبر XLOOKUP.</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>الميزانية العمومية (Balance Sheet):</strong> الأصول = الالتزامات + حقوق الملكية. ترحيل صافي ربح الفترة إلى الأرباح المٌبقاة. فحص التوازن.</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>تنسيق احترافي + حماية:</strong> تنسيق القوائم بمعايير IFRS، تأمين الخلايا (Protect Sheet) لمنع التعديل الخاطئ، إعداد الطباعة.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> هذا اليوم يُنتج أهم مخرجات الدورة، احتفظ بنسخة نهائية من الملف كمرجع مهني مستقبلي.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold">المحور 6</span>
+              <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-bold">مهم جداً</span>
+            </div>
+            <a href="day5-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم الخامس (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 6 ========== -->
+        <div class="swiper-slide day-card card-hover">
+          <div class="day-header day-colors-6">
+            <div class="day-badge"><i class="fas fa-chart-line ml-1"></i> التحليل المتقدم</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم السادس</div>
+                <div class="day-num">06</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-chart-pie ml-2"></i>التقارير المحورية ولوحة التحكم</h3>
+            <p class="text-sm opacity-90 mt-1">المحوران 7 + 8 | الرؤى المالية</p>
+          </div>
+          <div class="day-body">
+            <div class="session-block session-color-1">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                <span class="session-time">0:00 - 0:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>الجداول المحورية (Pivot Tables):</strong> بناء Pivot من البيانات المالية، الحقول المحسوبة (Calculated Fields) لهوامش الربح، تسوية البنوك، تحليل أعمار الديون (Aging).</p>
+            </div>
+            <div class="session-block session-color-2">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                <span class="session-time">0:30 - 1:00</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>مؤشرات الأداء (KPIs):</strong> صافي هامش الربح، نسبة التداول، ROA، ROE، نسبة الدين. بناء KPI Cards مع أسهم الاتجاه (↑↓).</p>
+            </div>
+            <div class="session-block session-color-3">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                <span class="session-time">1:00 - 1:30</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed"><strong>لوحة التحكم التنفيذية:</strong> الرسوم المزدوجة (Combo Charts)، الأعمدة المكدسة، مقسمات العرض (Slicers & Timelines) للفرز التفاعلي بالأشهر والفروع.</p>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> هذا اليوم هو ما يميّز المحترف عن المبتدئ، لوحة التحكم التنفيذية تُقدَّم للإدارة العليا مباشرة.
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">المحور 7</span>
+              <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">المحور 8</span>
+            </div>
+            <a href="day6-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم السادس (سلايدات)</a>
+          </div>
+        </div>
+
+        <!-- ========== اليوم 7 ========== -->
+        <div class="swiper-slide day-card card-hover md:col-span-2">
+          <div class="day-header day-colors-7">
+            <div class="day-badge"><i class="fas fa-trophy ml-1"></i> التتويج</div>
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="day-label">اليوم السابع والأخير</div>
+                <div class="day-num">07</div>
+              </div>
+              <div class="text-left">
+                <div class="text-3xl font-bold">90</div>
+                <div class="text-xs opacity-80">دقيقة</div>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2"><i class="fas fa-trophy ml-2"></i>مشروع التخرج: دورة محاسبية كاملة</h3>
+            <p class="text-sm opacity-90 mt-1">المحور 9 | التطبيق الشامل على شركة النجاح التجارية</p>
+          </div>
+          <div class="day-body">
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="session-block session-color-1">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-emerald-600"></i> الجلسة الأولى</span>
+                  <span class="session-time">0:00 - 0:30</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed"><strong>بداية المشروع:</strong> استلام أرصدة أول المدة لشركة "النجاح التجارية"، تسجيل العمليات الـ 5 الأولى (مشتريات نقدية وآجلة، مردودات، مبيعات).</p>
+              </div>
+              <div class="session-block session-color-2">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-cyan-600"></i> الجلسة الثانية</span>
+                  <span class="session-time">0:30 - 1:00</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed"><strong>استكمال العمليات:</strong> العمليات 6-10 (مردودات مبيعات، رواتب، شراء أصول، تحصيل ذمم، سداد موردین)، ثم التسويات الجردية (إهلاك، مخصص ديون، إيرادات مستحقة).</p>
+              </div>
+              <div class="session-block session-color-3">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-bold text-slate-800 text-sm"><i class="fas fa-play-circle ml-1 text-purple-600"></i> الجلسة الثالثة</span>
+                  <span class="session-time">1:00 - 1:30</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed"><strong>الإصدار النهائي:</strong> ميزان المراجعة بعد التسويات، إقفال الحسابات المؤقتة، إصدار قائمة الدخل والميزانية العمومية المعتمدة. فحص التوازن النهائي.</p>
+              </div>
+            </div>
+            <div class="tip-box">
+              <i class="fas fa-lightbulb ml-1"></i>
+              <strong>نصيحة المدرب:</strong> هذا المشروع هو شهادتك العملية، أنجزه بنفسك دون الرجوع للحل إلا بعد المحاولة الجادة. ستكتسب ثقة مهنية حقيقية.
+            </div>
+            <div class="bg-gradient-to-l from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 mt-4">
+              <h4 class="font-bold text-amber-900 mb-2"><i class="fas fa-medal ml-2"></i>مخرجات مشروع التخرج</h4>
+              <div class="grid md:grid-cols-2 gap-2 text-sm text-slate-700">
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> 10 عمليات مالية متنوعة مُسجّلة</div>
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> قيود تسويات جردية كاملة</div>
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> ميزان مراجعة متزن</div>
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> قائمة الدخل معتمدة</div>
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> ميزانية عمومية متزنة</div>
+                <div><i class="fas fa-check text-emerald-600 ml-1"></i> ملف Excel احترافي متكامل</div>
+              </div>
+            </div>
+            <div class="flex gap-2 mt-4 flex-wrap">
+              <span class="bg-amber-100 text-amber-700 px-2 py-1 rounded text-xs font-bold">المحور 9</span>
+              <span class="bg-amber-100 text-amber-700 px-2 py-1 rounded text-xs font-bold">مشروع التخرج</span>
+              <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs font-bold">شهادة إتمام</span>
+            </div>
+            <a href="day7-slides.html" class="start-day-btn mt-4"><i class="fas fa-rocket"></i> ابدأ اليوم السابع (سلايدات)</a>
+          </div>
+        </div>
+
+        </div> <!-- /swiper-wrapper -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next" style="color: #059669;"></div>
+        <div class="swiper-button-prev" style="color: #059669;"></div>
+      </div> <!-- /swiper -->
+
+      <!-- Study Tips -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 mt-6 border-r-8 border-emerald-600">
+        <h3 class="section-title text-lg font-bold text-emerald-800 mb-4"><i class="fas fa-graduation-cap ml-2"></i>نصائح ذهبية من المدرب عبدالرحمن خليل</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex gap-3 items-start">
+            <div class="bg-emerald-100 text-emerald-700 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-clock"></i></div>
+            <div>
+              <h5 class="font-bold text-slate-800">الالتزام بالوقت</h5>
+              <p class="text-sm text-slate-600">خصّص 90 دقيقة يومياً في وقت ثابت (صباحاً أفضل للتركيز)، وتجنب المقاطعات.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="bg-blue-100 text-blue-700 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <h5 class="font-bold text-slate-800">التطبيق الفوري</h5>
+              <p class="text-sm text-slate-600">افتح Excel أثناء المشاهدة، وطبّق كل خطوة فور شرحها، لا تعتمد على المشاهدة فقط.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="bg-purple-100 text-purple-700 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-redo"></i></div>
+            <div>
+              <h5 class="font-bold text-slate-800">التكرار الذكي</h5>
+              <p class="text-sm text-slate-600">أعد حل التمارين بعد يومين، ثم بعد أسبوع، لترسيخ المعلومة في الذاكرة طويلة المدى.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="bg-orange-100 text-orange-700 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-file-excel"></i></div>
+            <div>
+              <h5 class="font-bold text-slate-800">حفظ الملفات</h5>
+              <p class="text-sm text-slate-600">أنشئ مجلداً خاصاً على جهازك باسم "دورة_عبدالرحمن_خليل" واحفظ فيه كل ملفات الأيام.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Timeline -->
+      <div class="bg-gradient-to-l from-slate-900 to-slate-800 rounded-2xl shadow-xl p-6 mt-6 text-white">
+        <h3 class="text-lg font-bold mb-4"><i class="fas fa-route ml-2 text-emerald-300"></i>الخريطة الزمنية للدورة</h3>
+        <div class="relative">
+          <div class="grid grid-cols-7 gap-2">
+            <div class="text-center">
+              <div class="bg-emerald-500 text-white rounded-lg p-3 font-bold">ي1</div>
+              <div class="text-xs mt-1 text-slate-300">الأساسيات</div>
+              <div class="text-[10px] text-emerald-300 mt-1">محور 1+2</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-cyan-500 text-white rounded-lg p-3 font-bold">ي2</div>
+              <div class="text-xs mt-1 text-slate-300">الدوال</div>
+              <div class="text-[10px] text-cyan-300 mt-1">محور 3</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-purple-500 text-white rounded-lg p-3 font-bold">ي3</div>
+              <div class="text-xs mt-1 text-slate-300">اليومية</div>
+              <div class="text-[10px] text-purple-300 mt-1">محور 4</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-red-500 text-white rounded-lg p-3 font-bold">ي4</div>
+              <div class="text-xs mt-1 text-slate-300">المراجعة</div>
+              <div class="text-[10px] text-red-300 mt-1">محور 5</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-orange-500 text-white rounded-lg p-3 font-bold">ي5</div>
+              <div class="text-xs mt-1 text-slate-300">القوائم</div>
+              <div class="text-[10px] text-orange-300 mt-1">محور 6</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-blue-500 text-white rounded-lg p-3 font-bold">ي6</div>
+              <div class="text-xs mt-1 text-slate-300">التحليل</div>
+              <div class="text-[10px] text-blue-300 mt-1">محور 7+8</div>
+            </div>
+            <div class="text-center">
+              <div class="bg-amber-500 text-white rounded-lg p-3 font-bold">ي7</div>
+              <div class="text-xs mt-1 text-slate-300">التخرج</div>
+              <div class="text-[10px] text-amber-300 mt-1">محور 9</div>
+            </div>
+          </div>
+          <div class="mt-4 h-2 bg-slate-700 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-l from-emerald-400 via-cyan-400 to-amber-400" style="width:100%"></div>
+          </div>
+          <div class="flex justify-between mt-2 text-xs text-slate-400">
+            <span>البداية</span>
+            <span>الشهادة المعتمدة</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= AXIS 1 ================= -->
+    <section id="axis1" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">1</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">واجهة Excel وأهم الأدوات المحاسبية</h2>
+          <p class="text-sm text-slate-500">Excel Interface & Accounting Essentials | <span class="text-emerald-600 font-bold">اليوم الأول - الجلسة 1</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري والمفهوم المحاسبي</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          تُعد واجهة Microsoft Excel البيئة الأساسية التي يعمل عليها المحاسب يومياً، وإتقان مكوناتها يُسرّع الإنجاز ويقلّل الأخطاء بشكل جذري.
+          تتكون الواجهة من: <strong>شريط العنوان (Title Bar)</strong>، <strong>شريط الأدوات السريع (Quick Access Toolbar)</strong>،
+          <strong>الشريط الرئيسي (Ribbon)</strong> المُقسّم إلى تبويبات (Home, Insert, Page Layout, Formulas, Data, Review, View)،
+          <strong>شريط الصيغة (Formula Bar)</strong> الذي يعرض محتوى الخلية النشطة أو المعادلة المكتوبة فيها،
+          <strong>منطقة العمل (Worksheet Grid)</strong> المكونة من أعمدة (A, B, C...) وصفوف (1, 2, 3...) ونقاط تقاطعها تُسمى <strong>الخلايا (Cells)</strong>.
+        </p>
+        <p class="text-slate-700 leading-loose mb-3">
+          من أهم الأدوات المحاسبية في الواجهة: <strong>تنسيق المحاسبة (Accounting Format)</strong> الذي يُظهر العملة مع محاذاة الرموز على اليمين والأرقام على اليسار،
+          ويميّز القيم السالبة بين قوسين مثل <code class="bg-slate-100 px-2 py-1 rounded">($1,000.00)</code>، مما يُسهّل قراءة القوائم المالية.
+          كما يُستخدم <strong>تثبيت الأطر (Freeze Panes)</strong> لتثبيت صف العناوين أو العمود الأول أثناء التمرير عبر بيانات طويلة.
+        </p>
+        <div class="info-box">
+          <strong><i class="fas fa-info-circle"></i> لماذا التنسيق المحاسبي مهم؟</strong><br>
+          لأن المعايير الدولية (IFRS) والمعايير المحلية تتطلب توحيد شكل عرض الأرقام المالية، وإظهار السالب بين قوسين هو العرف المحاسبي العالمي الذي يمنع الالتباس بين الطرح والقيمة السالبة.
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي خطوة بخطوة</h3>
+        <div class="step-card"><span class="step-num">1</span><strong>ضبط تنسيق المحاسبة:</strong> حدد نطاق الأرقام → تبويب Home → مجموعة Number → اختر Accounting من القائمة المنسدلة → حدد العملة (ريال، دولار) وعدد الخانات العشرية (2).</div>
+        <div class="step-card"><span class="step-num">2</span><strong>إظهار السالب بين قوسين:</strong> اضغط <span class="shortcut-key">Ctrl + 1</span> → تبويب Number → Custom → اكتب التنسيق: <code class="formula-chip">#,##0.00_);(#,##0.00)</code> → OK.</div>
+        <div class="step-card"><span class="step-num">3</span><strong>تثبيت العناوين (Freeze Panes):</strong> انقر على الخلية أسفل صف العنوان وأيسر عمود التثبيت (مثلاً B2) → View → Freeze Panes → Freeze Panes.</div>
+        <div class="step-card"><span class="step-num">4</span><strong>إدراج فواصل الآلاف:</strong> حدد الأرقام → <span class="shortcut-key">Ctrl + Shift + 1</span> أو من Home → Comma Style.</div>
+        <div class="step-card"><span class="step-num">5</span><strong>اختصارات المحاسب الأساسية:</strong>
+          <ul class="list-disc pr-6 mt-2 space-y-1 text-sm">
+            <li>تحديد جدول كامل: <span class="shortcut-key">Ctrl + A</span> (داخل الجدول) أو <span class="shortcut-key">Ctrl + Shift + *</span></li>
+            <li>إدراج مجموع تلقائي: <span class="shortcut-key">Alt + =</span></li>
+            <li>تنسيق العملة: <span class="shortcut-key">Ctrl + Shift + 4</span></li>
+            <li>تنسيق النسبة المئوية: <span class="shortcut-key">Ctrl + Shift + 5</span></li>
+            <li>فتح نافذة تنسيق الخلايا: <span class="shortcut-key">Ctrl + 1</span></li>
+            <li>إدراج التاريخ الحالي: <span class="shortcut-key">Ctrl + ;</span></li>
+            <li>نسخ الخلية: <span class="shortcut-key">Ctrl + D</span> (أسفل) / <span class="shortcut-key">Ctrl + R</span> (يمين)</li>
+            <li>الانتقال لنهاية البيانات: <span class="shortcut-key">Ctrl + Arrow</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات الرياضية والمحاسبية</h3>
+        <div class="bg-slate-50 p-4 rounded-lg">
+          <p class="mb-2"><strong>تنسيق مخصص للسالب بين قوسين:</strong></p>
+          <div class="formula-chip">#,##0.00_);(#,##0.00)</div>
+          <p class="mt-3 mb-2"><strong>تنسيق العملة مع رمز الريال:</strong></p>
+          <div class="formula-chip">#,##0.00_);(#,##0.00) "ر.س"</div>
+          <p class="mt-3 mb-2"><strong>حساب مجموع عمود الأرصدة:</strong></p>
+          <div class="formula-chip">=SUM(C2:C100)</div>
+          <p class="mt-3 mb-2"><strong>التحقق من توازن المعادلة المحاسبية:</strong></p>
+          <div class="formula-chip">=IF(SUM(Debit)=SUM(Credit),"متزن ✔","غير متزن ✘")</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: بيانات مالية قبل وبعد التنسيق</h3>
+        <div class="flex gap-2 mb-3">
+          <button class="tab-btn active" onclick="switchSim('sim1a',this)">قبل التنسيق</button>
+          <button class="tab-btn" onclick="switchSim('sim1b',this)">بعد التنسيق المحاسبي</button>
+        </div>
+        <div id="sim1a" class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Book1 - Excel</span></div>
+          <div class="formula-bar"><div class="name-box">C2</div><div class="fx">fx</div><input value="15000" readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">البند</td><td class="header-cell">القسم</td><td class="header-cell">المبلغ</td><td class="header-cell">التاريخ</td><td class="header-cell">ملاحظات</td></tr>
+                <tr><td class="row-num">2</td><td>الإيرادات</td><td>مبيعات</td><td>15000</td><td>2026/01/15</td><td>فاتورة #101</td></tr>
+                <tr><td class="row-num">3</td><td>مصروفات</td><td>رواتب</td><td>-4500</td><td>2026/01/30</td><td>رواتب الشهر</td></tr>
+                <tr><td class="row-num">4</td><td>أصول</td><td>معدات</td><td>25000</td><td>2026/02/01</td><td>شراء جهاز</td></tr>
+                <tr><td class="row-num">5</td><td>التزامات</td><td>قروض</td><td>-10000</td><td>2026/02/10</td><td>سداد قرض</td></tr>
+                <tr><td class="row-num">6</td><td>إيرادات</td><td>خدمات</td><td>8500</td><td>2026/02/20</td><td>فاتورة #102</td></tr>
+                <tr><td class="row-num">7</td><td>مصروفات</td><td>إيجار</td><td>-2000</td><td>2026/02/28</td><td>إيجار شهر</td></tr>
+                <tr><td class="row-num">8</td><td colspan="2" style="text-align:center;font-weight:700">الإجمالي</td><td style="font-weight:700">32000</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>جاهز</span><span>Sum: 32000</span></div>
+        </div>
+        <div id="sim1b" class="excel-wrap hidden">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Book1 - Excel (Accounting Format)</span></div>
+          <div class="formula-bar"><div class="name-box">C2</div><div class="fx">fx</div><input value="$15,000.00" readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">البند</td><td class="header-cell">القسم</td><td class="header-cell">المبلغ</td><td class="header-cell">التاريخ</td><td class="header-cell">ملاحظات</td></tr>
+                <tr><td class="row-num">2</td><td>الإيرادات</td><td>مبيعات</td><td class="acc">$15,000.00</td><td>2026/01/15</td><td>فاتورة #101</td></tr>
+                <tr><td class="row-num">3</td><td>مصروفات</td><td>رواتب</td><td class="acc neg">($4,500.00)</td><td>2026/01/30</td><td>رواتب الشهر</td></tr>
+                <tr><td class="row-num">4</td><td>أصول</td><td>معدات</td><td class="acc">$25,000.00</td><td>2026/02/01</td><td>شراء جهاز</td></tr>
+                <tr><td class="row-num">5</td><td>التزامات</td><td>قروض</td><td class="acc neg">($10,000.00)</td><td>2026/02/10</td><td>سداد قرض</td></tr>
+                <tr><td class="row-num">6</td><td>إيرادات</td><td>خدمات</td><td class="acc">$8,500.00</td><td>2026/02/20</td><td>فاتورة #102</td></tr>
+                <tr><td class="row-num">7</td><td>مصروفات</td><td>إيجار</td><td class="acc neg">($2,000.00)</td><td>2026/02/28</td><td>إيجار شهر</td></tr>
+                <tr><td class="row-num">8</td><td colspan="2" style="text-align:center;font-weight:700">الإجمالي</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$32,000.00</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Accounting | USD</span><span>Sum: $32,000.00</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('01_Excel_Setup_Abdulrahman_Khalil.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 01_Excel_Setup_Abdulrahman_Khalil.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 2 ================= -->
+    <section id="axis2" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">2</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">إدخال وتنظيم البيانات المالية</h2>
+          <p class="text-sm text-slate-500">Chart of Accounts & Data Validation | <span class="text-emerald-600 font-bold">اليوم الأول - الجلسات 2+3</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          <strong>دليل الحسابات (Chart of Accounts - COA)</strong> هو الهيكل العظمي لأي نظام محاسبي، وهو قائمة مُرمّزة بجميع الحسابات التي تستخدمها المنشأة لتصنيف العمليات المالية.
+          يعتمد الترميز العشري العالمي على خمسة مجموعات رئيسية متوافقة مع المعادلة المحاسبية:
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>1 - الأصول (Assets):</strong> الموارد المملوكة للمنشأة (نقدية، بنوك، ذمم مدينة، مخزون، أصول ثابتة). <em>طبيعتها مدينة.</em></li>
+          <li><strong>2 - الالتزامات (Liabilities):</strong> ما على المنشأة من ديون (موردون، قروض، أوراق دفع). <em>طبيعتها دائنة.</em></li>
+          <li><strong>3 - حقوق الملكية (Equity):</strong> حقوق المالكين (رأس المال، أرباح محتجزة، أرباح مُبقاة). <em>طبيعتها دائنة.</em></li>
+          <li><strong>4 - الإيرادات (Revenues):</strong> التدفقات الداخلة من النشاط الرئيسي (مبيعات، إيرادات خدمات، إيرادات فوائد). <em>طبيعتها دائنة.</em></li>
+          <li><strong>5 - المصروفات (Expenses):</strong> التدفقات الخارجة (رواتب، إيجار، إهلاك، كهرباء). <em>طبيعتها مدينة.</em></li>
+        </ul>
+        <div class="warning-box mt-3">
+          <strong><i class="fas fa-exclamation-triangle"></i> قاعدة ذهبية:</strong> الترميز الموحد يضمن توحيد التصنيف بين الفروع والفترات، ويُسهّل إعداد التقارير الآلية.
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي</h3>
+        <div class="step-card"><span class="step-num">1</span><strong>إنشاء شيت دليل الحسابات:</strong> افتح ورقة جديدة باسم "COA" → أنشئ الأعمدة: كود الحساب، اسم الحساب، نوع الحساب، الطبيعة، الرصيد الافتتاحي.</div>
+        <div class="step-card"><span class="step-num">2</span><strong>إدخال الحسابات بالترميز العشري:</strong> ابدأ بـ 1000 للأصول، 1100 للنقدية، 1200 للبنوك، 2000 للالتزامات... وهكذا مع حسابات فرعية (1101، 1102).</div>
+        <div class="step-card"><span class="step-num">3</span><strong>تحويل البيانات إلى جدول ذكي:</strong> حدد البيانات → <span class="shortcut-key">Ctrl + T</span> → فعّل "My table has headers" → سيصبح الجدول ديناميكياً يُوسّع تلقائياً عند إضافة صفوف.</div>
+        <div class="step-card"><span class="step-num">4</span><strong>التحقق من صحة البيانات (Data Validation):</strong> حدد عمود "نوع الحساب" → Data → Data Validation → Allow: List → Source: <code class="formula-chip">أصول,التزامات,حقوق_ملكية,إيرادات,مصروفات</code> → سيظهر قائمة منسدلة تمنع الأخطاء المطبعية.</div>
+        <div class="step-card"><span class="step-num">5</span><strong>قوائم منسدلة ديناميكية:</strong> بدلاً من كتابة العناصر يدوياً، اجعل مصدر القائمة هو نطاقاً مُسمّى (Named Range) مثل <code class="formula-chip">=AccountTypes</code> ليتحدّث تلقائياً عند إضافة حسابات جديدة.</div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات</h3>
+        <div class="bg-slate-50 p-4 rounded-lg">
+          <p class="mb-2"><strong>إنشاء نطاق مُسمّى ديناميكي (OFFSET):</strong></p>
+          <div class="formula-chip">=OFFSET(COA!$A$2,0,0,COUNTA(COA!$A:$A)-1,1)</div>
+          <p class="mt-3 mb-2"><strong>التحقق من تفرد كود الحساب:</strong></p>
+          <div class="formula-chip">=IF(COUNTIF($A$2:$A$100,A2)>1,"مكرر ✘","فريد ✔")</div>
+          <p class="mt-3 mb-2"><strong>استخراج طبيعة الحساب تلقائياً من أول رقم:</strong></p>
+          <div class="formula-chip">=IF(LEFT(A2,1)="1","مدين",IF(LEFT(A2,1)="5","مدين","دائن"))</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: دليل الحسابات</h3>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Chart_Of_Accounts.xlsx</span></div>
+          <div class="formula-bar"><div class="name-box">A1</div><div class="fx">fx</div><input value="كود الحساب" readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">نوع الحساب</td><td class="header-cell">الطبيعة</td><td class="header-cell">الرصيد الافتتاحي</td></tr>
+                <tr><td class="row-num">2</td><td class="num">1000</td><td>الأصول</td><td>أصول</td><td>مدين</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">3</td><td class="num">1100</td><td>الصندوق</td><td>أصول</td><td>مدين</td><td class="acc">$15,000.00</td></tr>
+                <tr><td class="row-num">4</td><td class="num">1200</td><td>البنك الأهلي</td><td>أصول</td><td>مدين</td><td class="acc">$120,500.00</td></tr>
+                <tr><td class="row-num">5</td><td class="num">1300</td><td>الذمم المدينة</td><td>أصول</td><td>مدين</td><td class="acc">$45,200.00</td></tr>
+                <tr><td class="row-num">6</td><td class="num">1400</td><td>المخزون</td><td>أصول</td><td>مدين</td><td class="acc">$78,000.00</td></tr>
+                <tr><td class="row-num">7</td><td class="num">1500</td><td>الأصول الثابتة</td><td>أصول</td><td>مدين</td><td class="acc">$250,000.00</td></tr>
+                <tr><td class="row-num">8</td><td class="num">2000</td><td>الالتزامات</td><td>التزامات</td><td>دائن</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">9</td><td class="num">2100</td><td>الموردون</td><td>التزامات</td><td>دائن</td><td class="acc">$32,400.00</td></tr>
+                <tr><td class="row-num">10</td><td class="num">2200</td><td>قروض طويلة الأجل</td><td>التزامات</td><td>دائن</td><td class="acc">$80,000.00</td></tr>
+                <tr><td class="row-num">11</td><td class="num">3000</td><td>رأس المال</td><td>حقوق ملكية</td><td>دائن</td><td class="acc">$300,000.00</td></tr>
+                <tr><td class="row-num">12</td><td class="num">3100</td><td>الأرباح المٌبقاة</td><td>حقوق ملكية</td><td>دائن</td><td class="acc">$96,300.00</td></tr>
+                <tr><td class="row-num">13</td><td class="num">4000</td><td>الإيرادات</td><td>إيرادات</td><td>دائن</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">14</td><td class="num">4100</td><td>إيرادات المبيعات</td><td>إيرادات</td><td>دائن</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">15</td><td class="num">5000</td><td>المصروفات</td><td>مصروفات</td><td>مدين</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">16</td><td class="num">5100</td><td>مصروف الرواتب</td><td>مصروفات</td><td>مدين</td><td class="acc">$0.00</td></tr>
+                <tr><td class="row-num">17</td><td class="num">5200</td><td>مصروف الإيجار</td><td>مصروفات</td><td>مدين</td><td class="acc">$0.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Table: COA_Table</span><span>16 records</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('02_Chart_Of_Accounts_Setup.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 02_Chart_Of_Accounts_Setup.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 3 ================= -->
+    <section id="axis3" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">3</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">الدوال والمعادلات المحاسبية الأساسية</h2>
+          <p class="text-sm text-slate-500">Accounting Formulas Mastery | <span class="text-cyan-600 font-bold">اليوم الثاني - كامل</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          الدوال في Excel هي اللبنات الأساسية لأتمتة الحسابات المحاسبية. تنقسم إلى أربع عائلات رئيسية:
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>دوال التجميع (SUM, SUMIF, SUMIFS):</strong> لجمع الأرقام وفق شروط محاسبية (حساب معين، فترة معينة، قسم معين).</li>
+          <li><strong>دوال البحث والربط (VLOOKUP, XLOOKUP):</strong> لجلب بيانات من جداول أخرى مثل اسم الحساب من دليله بمجرد إدخال كوده.</li>
+          <li><strong>الدوال المنطقية (IF, IFERROR):</strong> لاتخاذ قرارات تلقائية والتعامل مع الأخطاء مثل #DIV/0 و #N/A.</li>
+          <li><strong>التنسيق الشرطي (Conditional Formatting):</strong> لتلوين الخلايا تلقائياً عند تجاوز حد معين أو وجود فروقات.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي</h3>
+        <details open><summary>1. دالة SUM - الجمع البسيط</summary>
+          <p class="mt-2 text-slate-700">تجمع نطاقاً من الأرقام. مثال: جمع إجمالي المبيعات في العمود C من الصف 2 إلى 100.</p>
+          <div class="formula-chip mt-2">=SUM(C2:C100)</div>
+        </details>
+        <details><summary>2. دالة SUMIF - الجمع بشرط واحد</summary>
+          <p class="mt-2 text-slate-700">تجمع القيم من نطاق معين إذا تحقق شرط في نطاق آخر. مثال: جمع المبيعات الخاصة بـ "الفرع الأول" فقط.</p>
+          <div class="formula-chip mt-2">=SUMIF(B2:B100,"الفرع الأول",C2:C100)</div>
+        </details>
+        <details><summary>3. دالة SUMIFS - الجمع بشروط متعددة</summary>
+          <p class="mt-2 text-slate-700">تجمع القيم بعدة شروط. مثال: مبيعات "الفرع الأول" في شهر "يناير".</p>
+          <div class="formula-chip mt-2">=SUMIFS(C2:C100,B2:B100,"الفرع الأول",A2:A100,"يناير")</div>
+        </details>
+        <details><summary>4. VLOOKUP - البحث العمودي التقليدي</summary>
+          <p class="mt-2 text-slate-700">يبحث عن قيمة في العمود الأول من جدول ويُرجع قيمة من عمود آخر. الصيغة: <code>VLOOKUP(lookup_value, table_array, col_index, [range_lookup])</code></p>
+          <div class="formula-chip mt-2">=VLOOKUP(A2,COA_Table,2,FALSE)</div>
+          <div class="warning-box mt-2">يبحث فقط من اليمين إلى اليسار (في RTL) ويتطلب أن يكون مفتاح البحث في أول عمود.</div>
+        </details>
+        <details><summary>5. XLOOKUP - البديل الحديث الاحترافي</summary>
+          <p class="mt-2 text-slate-700">أحدث وأقوى دالة بحث، تحل عيوب VLOOKUP. الصيغة: <code>XLOOKUP(lookup, lookup_array, return_array, [if_not_found])</code></p>
+          <div class="formula-chip mt-2">=XLOOKUP(A2,COA!A:A,COA!B:B,"الحساب غير موجود")</div>
+          <div class="info-box mt-2">المزايا: تبحث في أي اتجاه، تُرجع قيمة مخصصة عند عدم وجود النتيجة، وتدعم البحث التقريبي والثنائي.</div>
+        </details>
+        <details><summary>6. IF المركبة للتحقق المحاسبي</summary>
+          <p class="mt-2 text-slate-700">تُستخدم لاتخاذ قرارات متسلسلة. مثال: تصنيف الحساب حسب رصيده.</p>
+          <div class="formula-chip mt-2">=IF(C2>100000,"مرتفع",IF(C2>50000,"متوسط","منخفض"))</div>
+        </details>
+        <details><summary>7. IFERROR - معالجة الأخطاء</summary>
+          <p class="mt-2 text-slate-700">تُظهر قيمة بديلة عند حدوث خطأ. مفيدة في القسمة وعند البحث.</p>
+          <div class="formula-chip mt-2">=IFERROR(A2/B2,0)</div>
+          <div class="formula-chip mt-2">=IFERROR(VLOOKUP(...),"غير موجود")</div>
+        </details>
+        <details><summary>8. التنسيق الشرطي - تظليل الفروقات</summary>
+          <p class="mt-2 text-slate-700">حدد نطاق الأرصدة → Home → Conditional Formatting → Highlight Cells Rules → Not Equal To → اكتب <code>0</code> → اختر "Light Red Fill".</p>
+          <p class="mt-2">أو باستخدام معادلة مخصصة: <code class="formula-chip">=$E2<>$F2</code> لتظليل الصفوف التي يختلف فيها المدين عن الدائن.</p>
+        </details>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات التطبيقية</h3>
+        <div class="bg-slate-50 p-4 rounded-lg space-y-2">
+          <div class="formula-chip">=SUM(C2:C50)</div>
+          <div class="formula-chip">=SUMIF(B2:B50,"مبيعات",C2:C50)</div>
+          <div class="formula-chip">=SUMIFS(D2:D50,B2:B50,"مبيعات",C2:C50,"&gt;="&DATE(2026,1,1))</div>
+          <div class="formula-chip">=VLOOKUP(A2,COA!A:B,2,FALSE)</div>
+          <div class="formula-chip">=XLOOKUP(A2,COA!A:A,COA!B:B,"غير موجود")</div>
+          <div class="formula-chip">=IFERROR(A2/B2,0)</div>
+          <div class="formula-chip">=IF(SUM(Debit)=SUM(Credit),"متزن ✔","فارق: "&TEXT(ABS(SUM(Debit)-SUM(Credit)),"#,##0.00"))</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: فواتير ومصروفات مع المعادلات</h3>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Formulas_Mastery.xlsx</span></div>
+          <div class="formula-bar"><div class="name-box">E2</div><div class="fx">fx</div><input value='=XLOOKUP(B2,COA!A:A,COA!B:B,"غير موجود")' readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">التاريخ</td><td class="header-cell">كود الحساب</td><td class="header-cell">البيان</td><td class="header-cell">المبلغ</td><td class="header-cell">اسم الحساب (XLOOKUP)</td><td class="header-cell">نوع الحساب</td></tr>
+                <tr><td class="row-num">2</td><td>2026/01/05</td><td class="num">1100</td><td>إيداع نقدي</td><td class="acc">$5,000.00</td><td>الصندوق</td><td>أصول</td></tr>
+                <tr><td class="row-num">3</td><td>2026/01/10</td><td class="num">4100</td><td>فاتورة مبيعات #101</td><td class="acc">$12,500.00</td><td>إيرادات المبيعات</td><td>إيرادات</td></tr>
+                <tr><td class="row-num">4</td><td>2026/01/15</td><td class="num">5100</td><td>رواتب يناير</td><td class="acc neg">($8,000.00)</td><td>مصروف الرواتب</td><td>مصروفات</td></tr>
+                <tr><td class="row-num">5</td><td>2026/01/20</td><td class="num">1300</td><td>مبيعات آجلة - عميل (أ)</td><td class="acc">$7,200.00</td><td>الذمم المدينة</td><td>أصول</td></tr>
+                <tr><td class="row-num">6</td><td>2026/01/25</td><td class="num">5200</td><td>إيجار المقر</td><td class="acc neg">($3,500.00)</td><td>مصروف الإيجار</td><td>مصروفات</td></tr>
+                <tr><td class="row-num">7</td><td>2026/01/28</td><td class="num">4100</td><td>فاتورة مبيعات #102</td><td class="acc">$9,800.00</td><td>إيرادات المبيعات</td><td>إيرادات</td></tr>
+                <tr><td class="row-num">8</td><td colspan="3" style="text-align:center;font-weight:700">إجمالي المبيعات (SUMIF)</td><td class="acc" style="font-weight:700">$22,300.00</td><td colspan="2" style="font-size:11px;color:#666">=SUMIF(B2:B100,4100,D2:D100)</td></tr>
+                <tr><td class="row-num">9</td><td colspan="3" style="text-align:center;font-weight:700">إجمالي المصروفات</td><td class="acc neg" style="font-weight:700">($11,500.00)</td><td colspan="2" style="font-size:11px;color:#666">=SUMIF(F2:F100,"مصروفات",D2:D100)</td></tr>
+                <tr><td class="row-num">10</td><td colspan="3" style="text-align:center;font-weight:700">صافي الربح</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$10,800.00</td><td colspan="2" style="font-size:11px;color:#666">=D8+D9</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Ready</span><span>Net Income: $10,800.00</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('03_Formulas_Mastery_Sheet.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 03_Formulas_Mastery_Sheet.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 4 ================= -->
+    <section id="axis4" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">4</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">إعداد دفتر اليومية ودفتر الأستاذ</h2>
+          <p class="text-sm text-slate-500">Journal & General Ledger | <span class="text-purple-600 font-bold">اليوم الثالث - كامل</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          <strong>دفتر اليومية (General Journal)</strong> هو سجل تاريخي للعمليات المالية. يُعرف بأنه "دفتر القيد الأولي"، حيث تُسجل فيه القيود يوماً بيوم.
+          يعتمد على مبدأ <strong>القيد المزدوج (Double Entry)</strong>، وهو المبدأ الذي ينص على أن لكل عملية مالية طرفين: طرف يأخذ (المدين) وطرف يُعطي (الدائن)، ويجب أن يتساويا في القيمة.
+          هذا يضمن توازن المعادلة المحاسبية في كل لحظة.
+        </p>
+        <p class="text-slate-700 leading-loose mb-3">
+          <strong>دفتر الأستاذ العام (General Ledger)</strong> هو السجل الذي يتم فيه ترحيل (Posting) قيود اليومية. الهدف منه تجميع كافة الحركات الخاصة بحساب معين (مثل حساب الصندوق) لمعرفة رصيده النهائي الذي سيُستخدم في ميزان المراجعة.
+        </p>
+        <div class="info-box">
+          <strong>قواعد القيد المزدوج (متى نجعل الحساب مديناً أو دائناً؟):</strong>
+          <ul class="list-disc pr-6 mt-2 space-y-1">
+            <li><strong>الأصول والمصروفات:</strong> طبيعتها مدينة. تزداد في الطرف المدين، وتنقص في الطرف الدائن.</li>
+            <li><strong>الالتزامات، حقوق الملكية، والإيرادات:</strong> طبيعتها دائنة. تزداد في الطرف الدائن، وتنقص في الطرف المدين.</li>
+            <li><strong class="text-red-600">شرط أساسي:</strong> مجموع العمود المدين في أي قيد يجب أن يساوي مجموع العمود الدائن.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي</h3>
+        <div class="step-card"><span class="step-num">1</span><strong>إنشاء شيت اليومية:</strong> أنشئ ورقة "Journal" بالأعمدة: التاريخ، رقم القيد، كود الحساب، اسم الحساب، البيان، مدين، دائن.</div>
+        <div class="step-card"><span class="step-num">2</span><strong>تسجيل القيود:</strong> كل عملية بقيد مستقل. القيد الأول: إيداع رأس المال (منح الصندوق/البنك مدين، رأس المال دائن).</div>
+        <div class="step-card"><span class="step-num">3</span><strong>معادلة التحقق من التوازن:</strong> في خلية منفصلة اكتب:
+          <div class="formula-chip mt-2">=IF(SUM(F2:F1000)=SUM(G2:G1000),"متزن ✔","فارق غير متزن: "&TEXT(ABS(SUM(F2:F1000)-SUM(G2:G1000)),"#,##0.00"))</div>
+        </div>
+        <div class="step-card"><span class="step-num">4</span><strong>إنشاء شيت الأستاذ:</strong> أنشئ ورقة "Ledger" بأعمدة: كود الحساب، اسم الحساب، الرصيد الافتتاحي، إجمالي مدين، إجمالي دائن، الرصيد النهائي.</div>
+        <div class="step-card"><span class="step-num">5</span><strong>ترحيل الحركات تلقائياً:</strong> استخدم SUMIFS لجلب مجاميع كل حساب من اليومية:
+          <div class="formula-chip mt-2">=SUMIFS(Journal!F:F,Journal!C:C,A2)</div>
+          <div class="formula-chip mt-2">=SUMIFS(Journal!G:G,Journal!C:C,A2)</div>
+        </div>
+        <div class="step-card"><span class="step-num">6</span><strong>الرصيد المتحرك:</strong>
+          <div class="formula-chip mt-2">=رصيد_سابق + مدين_حالي - دائن_حالي</div>
+          <p class="text-sm text-slate-600 mt-2">للحسابات ذات الطبيعة المدينة: الرصيد = الافتتاحي + مدين - دائن. وللحسابات الدائنة: العكس.</p>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات</h3>
+        <div class="bg-slate-50 p-4 rounded-lg space-y-2">
+          <div class="formula-chip">=IF(SUM(F:F)=SUM(G:G),"متزن ✔","فارق: "&TEXT(ABS(SUM(F:F)-SUM(G:G)),"#,##0.00"))</div>
+          <div class="formula-chip">=SUMIFS(Journal!F:F,Journal!C:C,[@AccountCode])</div>
+          <div class="formula-chip">=SUMIFS(Journal!G:G,Journal!C:C,[@AccountCode])</div>
+          <div class="formula-chip">=[@OpeningBalance]+[@TotalDebit]-[@TotalCredit]</div>
+          <div class="formula-chip">=IF([@Balance]>0,[@Balance],0) & " مدين"</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: اليومية العامة مع 4 قيود واقعية</h3>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Journal_Ledger.xlsx - دفتر اليومية</span></div>
+          <div class="formula-bar"><div class="name-box">F20</div><div class="fx">fx</div><input value='=IF(SUM(F2:F19)=SUM(G2:G19),"متزن ✔","فارق")' readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">التاريخ</td><td class="header-cell">رقم القيد</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">البيان</td><td class="header-cell">مدين</td><td class="header-cell">دائن</td></tr>
+                <tr><td class="row-num">2</td><td>2026/01/01</td><td class="num">JV-001</td><td class="num">1100</td><td>الصندوق</td><td>إيداع رأس المال النقدي</td><td class="acc">$100,000.00</td><td></td></tr>
+                <tr><td class="row-num">3</td><td></td><td></td><td class="num">3000</td><td>رأس المال</td><td>إيداع رأس المال النقدي</td><td></td><td class="acc">$100,000.00</td></tr>
+                <tr><td class="row-num">4</td><td>2026/01/05</td><td class="num">JV-002</td><td class="num">1500</td><td>الأصول الثابتة</td><td>شراء معدات مكتبية</td><td class="acc">$25,000.00</td><td></td></tr>
+                <tr><td class="row-num">5</td><td></td><td></td><td class="num">1200</td><td>البنك الأهلي</td><td>شراء معدات مكتبية</td><td></td><td class="acc">$25,000.00</td></tr>
+                <tr><td class="row-num">6</td><td>2026/01/15</td><td class="num">JV-003</td><td class="num">5100</td><td>مصروف الرواتب</td><td>سداد رواتب يناير</td><td class="acc">$8,000.00</td><td></td></tr>
+                <tr><td class="row-num">7</td><td></td><td></td><td class="num">1200</td><td>البنك الأهلي</td><td>سداد رواتب يناير</td><td></td><td class="acc">$8,000.00</td></tr>
+                <tr><td class="row-num">8</td><td>2026/01/25</td><td class="num">JV-004</td><td class="num">1300</td><td>الذمم المدينة</td><td>مبيعات آجلة - عميل (أ)</td><td class="acc">$15,000.00</td><td></td></tr>
+                <tr><td class="row-num">9</td><td></td><td></td><td class="num">4100</td><td>إيرادات المبيعات</td><td>مبيعات آجلة - عميل (أ)</td><td></td><td class="acc">$15,000.00</td></tr>
+                <tr><td class="row-num">10</td><td></td><td></td><td class="num">1100</td><td>الصندوق</td><td>مبيعات نقدية مباشرة</td><td class="acc">$7,500.00</td><td></td></tr>
+                <tr><td class="row-num">11</td><td></td><td></td><td class="num">4100</td><td>إيرادات المبيعات</td><td>مبيعات نقدية مباشرة</td><td></td><td class="acc">$7,500.00</td></tr>
+                <tr><td class="row-num">12</td><td colspan="5" style="text-align:center;font-weight:700;background:#e8f5e9">الإجمالي والتحقق</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$155,500.00</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$155,500.00</td></tr>
+                <tr><td class="row-num">13</td><td colspan="5" style="text-align:center;font-weight:700;background:#d1fae5;color:#065f46">✓ القيد متزن - لا فروقات</td><td colspan="2" style="text-align:center;background:#d1fae5;color:#065f46;font-weight:700">متزن ✔</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Journal</span><span>Total: $155,500.00 | Balanced ✔</span></div>
+        </div>
+
+        <h4 class="font-bold mt-6 mb-3 text-slate-700"><i class="fas fa-book ml-2 text-emerald-600"></i>دفتر الأستاذ العام (حسابات مختارة)</h4>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Ledger.xlsx - دفتر الأستاذ</span></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">الرصيد الافتتاحي</td><td class="header-cell">إجمالي مدين</td><td class="header-cell">إجمالي دائن</td><td class="header-cell">الرصيد النهائي</td></tr>
+                <tr><td class="row-num">2</td><td class="num">1100</td><td>الصندوق</td><td class="acc">$0.00</td><td class="acc">$107,500.00</td><td class="acc">$0.00</td><td class="acc">$107,500.00 مدين</td></tr>
+                <tr><td class="row-num">3</td><td class="num">1200</td><td>البنك الأهلي</td><td class="acc">$0.00</td><td class="acc">$0.00</td><td class="acc">$33,000.00</td><td class="acc neg">($33,000.00) دائن</td></tr>
+                <tr><td class="row-num">4</td><td class="num">1300</td><td>الذمم المدينة</td><td class="acc">$0.00</td><td class="acc">$15,000.00</td><td class="acc">$0.00</td><td class="acc">$15,000.00 مدين</td></tr>
+                <tr><td class="row-num">5</td><td class="num">1500</td><td>الأصول الثابتة</td><td class="acc">$0.00</td><td class="acc">$25,000.00</td><td class="acc">$0.00</td><td class="acc">$25,000.00 مدين</td></tr>
+                <tr><td class="row-num">6</td><td class="num">3000</td><td>رأس المال</td><td class="acc">$0.00</td><td class="acc">$0.00</td><td class="acc">$100,000.00</td><td class="acc">$100,000.00 دائن</td></tr>
+                <tr><td class="row-num">7</td><td class="num">4100</td><td>إيرادات المبيعات</td><td class="acc">$0.00</td><td class="acc">$0.00</td><td class="acc">$22,500.00</td><td class="acc">$22,500.00 دائن</td></tr>
+                <tr><td class="row-num">8</td><td class="num">5100</td><td>مصروف الرواتب</td><td class="acc">$0.00</td><td class="acc">$8,000.00</td><td class="acc">$0.00</td><td class="acc">$8,000.00 مدين</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Ledger</span><span>7 Accounts</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('04_Journal_And_Ledger.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 04_Journal_And_Ledger.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 5 ================= -->
+    <section id="axis5" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">5</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">إعداد ميزان المراجعة تلقائياً</h2>
+          <p class="text-sm text-slate-500">Automated Trial Balance | <span class="text-red-600 font-bold">اليوم الرابع - كامل</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          <strong>ميزان المراجعة (Trial Balance)</strong> هو قائمة بجميع حسابات الأستاذ مُرتّبة حسب دليل الحسابات، تُظهر أرصدة كل حساب عند تاريخ معين.
+          وظيفته الأساسية: <strong>التحقق من صحة الترحيل</strong> من اليومية إلى الأستاذ، والتأكد من تطبيق القيد المزدوج بشكل سليم.
+        </p>
+        <p class="text-slate-700 leading-loose mb-3">
+          هناك نوعان رئيسيان:
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>ميزان المراجعة بالمجاميع (Totals Trial Balance):</strong> يُظهر إجمالي حركات المدين والدائن لكل حساب دون احتساب الرصيد.</li>
+          <li><strong>ميزان المراجعة بالأرصدة (Balances Trial Balance):</strong> يُظهر الرصيد النهائي (صافي) لكل حساب، وهو الأكثر استخداماً.</li>
+          <li><strong>ميزان المراجعة قبل التسويات:</strong> يُعدّ قبل القيود الجردية (الإهلاك، المخصصات، الإيرادات المستحقة).</li>
+          <li><strong>ميزان المراجعة بعد التسويات:</strong> يُعدّ بعد ترحيل قيود التسويات الجردية، وهو الأساس لإعداد القوائم المالية.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي</h3>
+        <div class="step-card"><span class="step-num">1</span><strong>إنشاء شيت ميزان المراجعة:</strong> الأعمدة: كود الحساب، اسم الحساب، الرصيد الافتتاحي مدين، الرصيد الافتتاحي دائن، حركات مدين، حركات دائن، الرصيد النهائي مدين، الرصيد النهائي دائن.</div>
+        <div class="step-card"><span class="step-num">2</span><strong>جلب أسماء الحسابات تلقائياً:</strong>
+          <div class="formula-chip mt-2">=XLOOKUP(A2,COA!A:A,COA!B:B)</div>
+        </div>
+        <div class="step-card"><span class="step-num">3</span><strong>جلب مجاميع الحركات من اليومية:</strong>
+          <div class="formula-chip mt-2">=SUMIFS(Journal!F:F,Journal!C:C,A2)</div>
+          <div class="formula-chip mt-2">=SUMIFS(Journal!G:G,Journal!C:C,A2)</div>
+        </div>
+        <div class="step-card"><span class="step-num">4</span><strong>حساب الرصيد النهائي:</strong>
+          <div class="formula-chip mt-2">=IF((C2+E2-G2)>0, C2+E2-G2, 0)</div>
+          <div class="formula-chip mt-2">=IF((D2+G2-E2)>0, D2+G2-E2, 0)</div>
+          <p class="text-sm text-slate-600 mt-2">حيث C=افتتاحي مدين، D=افتتاحي دائن، E=حركات مدين، G=حركات دائن.</p>
+        </div>
+        <div class="step-card"><span class="step-num">5</span><strong>التحقق النهائي من التوازن:</strong>
+          <div class="formula-chip mt-2">=IF(SUM(G:G)=SUM(H:H),"متزن ✔","فارق: "&TEXT(ABS(SUM(G:G)-SUM(H:H)),"#,##0.00"))</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات</h3>
+        <div class="bg-slate-50 p-4 rounded-lg space-y-2">
+          <div class="formula-chip">=XLOOKUP(A2,COA!A:A,COA!B:B,"غير موجود")</div>
+          <div class="formula-chip">=SUMIFS(Journal!F:F,Journal!C:C,A2)</div>
+          <div class="formula-chip">=SUMIFS(Journal!G:G,Journal!C:C,A2)</div>
+          <div class="formula-chip">=IF((C2+E2-G2)>0, C2+E2-G2, 0)</div>
+          <div class="formula-chip">=IF((D2+G2-E2)>0, D2+G2-E2, 0)</div>
+          <div class="formula-chip">=IF(SUM(G2:G100)=SUM(H2:H100),"متزن ✔","فارق: "&TEXT(ABS(SUM(G2:G100)-SUM(H2:H100)),"#,##0.00"))</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: ميزان المراجعة المتزن</h3>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Trial_Balance.xlsx - في 31/01/2026</span></div>
+          <div class="formula-bar"><div class="name-box">G2</div><div class="fx">fx</div><input value='=IF((C2+E2-F2)>0, C2+E2-F2, 0)' readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">افتتاحي مدين</td><td class="header-cell">افتتاحي دائن</td><td class="header-cell">حركات مدين</td><td class="header-cell">حركات دائن</td><td class="header-cell">ختامي مدين</td><td class="header-cell">ختامي دائن</td></tr>
+                <tr><td class="row-num">2</td><td class="num">1100</td><td>الصندوق</td><td class="acc">$15,000.00</td><td></td><td class="acc">$107,500.00</td><td class="acc">$15,000.00</td><td class="acc">$107,500.00</td><td></td></tr>
+                <tr><td class="row-num">3</td><td class="num">1200</td><td>البنك الأهلي</td><td class="acc">$120,500.00</td><td></td><td class="acc">$50,000.00</td><td class="acc">$70,500.00</td><td class="acc">$100,000.00</td><td></td></tr>
+                <tr><td class="row-num">4</td><td class="num">1300</td><td>الذمم المدينة</td><td class="acc">$45,200.00</td><td></td><td class="acc">$15,000.00</td><td class="acc">$5,000.00</td><td class="acc">$55,200.00</td><td></td></tr>
+                <tr><td class="row-num">5</td><td class="num">1500</td><td>الأصول الثابتة</td><td class="acc">$250,000.00</td><td></td><td class="acc">$25,000.00</td><td class="acc">$0.00</td><td class="acc">$275,000.00</td><td></td></tr>
+                <tr><td class="row-num">6</td><td class="num">2100</td><td>الموردون</td><td></td><td class="acc">$32,400.00</td><td class="acc">$25,000.00</td><td class="acc">$40,000.00</td><td></td><td class="acc">$47,400.00</td></tr>
+                <tr><td class="row-num">7</td><td class="num">3000</td><td>رأس المال</td><td></td><td class="acc">$300,000.00</td><td class="acc">$0.00</td><td class="acc">$0.00</td><td></td><td class="acc">$300,000.00</td></tr>
+                <tr><td class="row-num">8</td><td class="num">4100</td><td>إيرادات المبيعات</td><td></td><td class="acc">$0.00</td><td class="acc">$0.00</td><td class="acc">$22,500.00</td><td></td><td class="acc">$22,500.00</td></tr>
+                <tr><td class="row-num">9</td><td class="num">5100</td><td>مصروف الرواتب</td><td class="acc">$0.00</td><td></td><td class="acc">$8,000.00</td><td class="acc">$0.00</td><td class="acc">$8,000.00</td><td></td></tr>
+                <tr><td class="row-num">10</td><td colspan="6" style="text-align:center;font-weight:700;background:#e8f5e9">الإجمالي</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$545,700.00</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$545,700.00</td></tr>
+                <tr><td class="row-num">11</td><td colspan="6" style="text-align:center;font-weight:700;background:#d1fae5;color:#065f46">✓ المدين = الدائن - الميزان متزن</td><td colspan="2" style="text-align:center;background:#d1fae5;color:#065f46;font-weight:700">متزن ✔</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Trial Balance</span><span>Total: $545,700.00 | Balanced ✔</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('05_Automated_Trial_Balance.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 05_Automated_Trial_Balance.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 6 ================= -->
+    <section id="axis6" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">6</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">تصميم وإعداد القوائم المالية</h2>
+          <p class="text-sm text-slate-500">Financial Statements Design | <span class="text-orange-600 font-bold">اليوم الخامس - كامل</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          القوائم المالية هي المنتج النهائي للعملية المحاسبية، وتُعدّ وفقاً لمعايير المحاسبة الدولية (IFRS) أو المعايير المحلية.
+          أهم قائمتين هما:
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>قائمة الدخل (Income Statement):</strong> توضح أداء المنشأة خلال فترة زمنية (شهر/ربع/سنة).
+            <br>المعادلة: <code class="formula-chip">الإيرادات - تكلفة المبيعات = مجمل الربح - المصروفات التشغيلية = صافي الربح التشغيلي - الضرائب والفوائد = صافي الربح</code></li>
+          <li><strong>الميزانية العمومية (Balance Sheet):</strong> توضح الوضع المالي في لحظة معينة.
+            <br>المعادلة المحاسبية: <code class="formula-chip">الأصول = الالتزامات + حقوق الملكية</code></li>
+        </ul>
+        <div class="info-box mt-3">
+          <strong>الربط بين القائمتين:</strong> صافي ربح الفترة من قائمة الدخل يُرحّل إلى بند "الأرباح المٌبقاة" في حقوق الملكية بالميزانية العمومية، وهذا ما يُسمى <strong>القائمة الشاملة للدخل</strong>.
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-list-ol ml-2"></i>(ب) الشرح الإجرائي</h3>
+        <div class="step-card"><span class="step-num">1</span><strong>إنشاء شيت القوائم المالية:</strong> ورقة منفصلة لكل قائمة (Income Statement, Balance Sheet).</div>
+        <div class="step-card"><span class="step-num">2</span><strong>استدعاء الأرصدة من ميزان المراجعة:</strong> بدلاً من إعادة الإدخال، استخدم XLOOKUP لجلب الرصيد لكل بند:
+          <div class="formula-chip mt-2">=XLOOKUP("4100",TB!A:A,TB!G:G,0)</div>
+        </div>
+        <div class="step-card"><span class="step-num">3</span><strong>حساب مجاميع الأقسام:</strong>
+          <div class="formula-chip mt-2">=SUM(B5:B15)  // إجمالي الإيرادات</div>
+          <div class="formula-chip mt-2">=B20-B25  // مجمل الربح</div>
+        </div>
+        <div class="step-card"><span class="step-num">4</span><strong>ترحيل صافي الربح:</strong> في الميزانية العمومية، بند الأرباح المٌبقاة:
+          <div class="formula-chip mt-2">=أرباح_مُبقاة_افتتاحية + صافي_ربح_الفترة</div>
+        </div>
+        <div class="step-card"><span class="step-num">5</span><strong>فحص التوازن:</strong>
+          <div class="formula-chip mt-2">=IF(TotalAssets=TotalLiabilities+Equity,"متزنة ✔","اختلاف: "&TEXT(Abs(...),"#,##0.00"))</div>
+        </div>
+        <div class="step-card"><span class="step-num">6</span><strong>تأمين الخلايا (Protect Sheet):</strong> حدد خلايا المعادلات → Review → Protect Sheet → بكلمة مرور، لمنع التعديل الخاطئ.</div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-square-root-variable ml-2"></i>(ج) المعادلات</h3>
+        <div class="bg-slate-50 p-4 rounded-lg space-y-2">
+          <div class="formula-chip">=XLOOKUP("4100",TB!A:A,TB!G:G,0)</div>
+          <div class="formula-chip">=SUM(Revenue_Range) - COGS = Gross_Profit</div>
+          <div class="formula-chip">=Gross_Profit - Operating_Expenses = Operating_Income</div>
+          <div class="formula-chip">=Operating_Income - Interest - Tax = Net_Income</div>
+          <div class="formula-chip">=Total_Assets - (Total_Liabilities + Total_Equity)  // يجب أن = 0</div>
+          <div class="formula-chip">=IF(Assets=Liabilities+Equity,"متزنة ✔","اختلاف")</div>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: القوائم المالية</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="excel-wrap">
+            <div class="excel-ribbon"><i class="fas fa-file-invoice-dollar"></i><span>قائمة الدخل - يناير 2026</span></div>
+            <div class="excel-grid">
+              <table>
+                <thead><tr><th class="corner"></th><th>A</th><th>B</th></tr></thead>
+                <tbody>
+                  <tr><td class="row-num">1</td><td class="header-cell" colspan="2" style="text-align:center;background:#107c41;color:#fff">قائمة الدخل</td></tr>
+                  <tr><td class="row-num">2</td><td colspan="2" style="text-align:center;font-weight:600">عن الفترة المنتهية في 31/01/2026</td></tr>
+                  <tr><td class="row-num">3</td><td style="font-weight:700">الإيرادات</td><td></td></tr>
+                  <tr><td class="row-num">4</td><td style="padding-right:20px">إيرادات المبيعات</td><td class="acc">$22,500.00</td></tr>
+                  <tr><td class="row-num">5</td><td style="font-weight:700">إجمالي الإيرادات</td><td class="acc" style="font-weight:700">$22,500.00</td></tr>
+                  <tr><td class="row-num">6</td><td style="font-weight:700">تكلفة المبيعات</td><td class="acc neg">($12,000.00)</td></tr>
+                  <tr><td class="row-num">7</td><td style="font-weight:700;background:#fef3c7">مجمل الربح</td><td class="acc" style="font-weight:700;background:#fef3c7">$10,500.00</td></tr>
+                  <tr><td class="row-num">8</td><td style="padding-right:20px">مصروف الرواتب</td><td class="acc neg">($8,000.00)</td></tr>
+                  <tr><td class="row-num">9</td><td style="padding-right:20px">مصروف الإيجار</td><td class="acc neg">($3,500.00)</td></tr>
+                  <tr><td class="row-num">10</td><td style="font-weight:700">إجمالي المصروفات</td><td class="acc neg" style="font-weight:700">($11,500.00)</td></tr>
+                  <tr><td class="row-num">11</td><td style="font-weight:700;background:#d1fae5;color:#065f46">صافي الربح</td><td class="acc" style="font-weight:700;background:#d1fae5;color:#065f46;border-top:3px double #000">($1,000.00)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="excel-wrap">
+            <div class="excel-ribbon"><i class="fas fa-balance-scale"></i><span>الميزانية العمومية - 31/01/2026</span></div>
+            <div class="excel-grid">
+              <table>
+                <thead><tr><th class="corner"></th><th>A</th><th>B</th></tr></thead>
+                <tbody>
+                  <tr><td class="row-num">1</td><td class="header-cell" colspan="2" style="text-align:center;background:#107c41;color:#fff">الميزانية العمومية</td></tr>
+                  <tr><td class="row-num">2</td><td colspan="2" style="text-align:center;font-weight:600">كما في 31/01/2026</td></tr>
+                  <tr><td class="row-num">3</td><td style="font-weight:700;background:#dbeafe">الأصول</td><td></td></tr>
+                  <tr><td class="row-num">4</td><td style="padding-right:20px">الصندوق</td><td class="acc">$107,500.00</td></tr>
+                  <tr><td class="row-num">5</td><td style="padding-right:20px">البنك</td><td class="acc">$100,000.00</td></tr>
+                  <tr><td class="row-num">6</td><td style="padding-right:20px">الذمم المدينة</td><td class="acc">$55,200.00</td></tr>
+                  <tr><td class="row-num">7</td><td style="padding-right:20px">الأصول الثابتة</td><td class="acc">$275,000.00</td></tr>
+                  <tr><td class="row-num">8</td><td style="font-weight:700;background:#dbeafe">إجمالي الأصول</td><td class="acc" style="font-weight:700">$537,700.00</td></tr>
+                  <tr><td class="row-num">9</td><td style="font-weight:700;background:#fee2e2">الالتزامات + حقوق الملكية</td><td></td></tr>
+                  <tr><td class="row-num">10</td><td style="padding-right:20px">الموردون</td><td class="acc">$47,400.00</td></tr>
+                  <tr><td class="row-num">11</td><td style="padding-right:20px">رأس المال</td><td class="acc">$300,000.00</td></tr>
+                  <tr><td class="row-num">12</td><td style="padding-right:20px">الأرباح المٌبقاة</td><td class="acc">$190,300.00</td></tr>
+                  <tr><td class="row-num">13</td><td style="font-weight:700;background:#d1fae5;color:#065f46">الإجمالي</td><td class="acc" style="font-weight:700;color:#065f46;border-top:3px double #000">$537,700.00</td></tr>
+                  <tr><td class="row-num">14</td><td colspan="2" style="text-align:center;font-weight:700;background:#d1fae5;color:#065f46">✓ الميزانية متزنة</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('06_Financial_Statements.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 06_Financial_Statements.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 7 ================= -->
+    <section id="axis7" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">7</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">إنشاء جداول وتقارير مالية احترافية</h2>
+          <p class="text-sm text-slate-500">Pivot Tables & Financial Reports | <span class="text-blue-600 font-bold">اليوم السادس - الجلسة 1</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          التقارير المالية الاحترافية تُستخرج من البيانات الضخمة عبر أدوات التحليل في Excel. من أهم هذه التقارير:
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>تسوية الحسابات البنكية (Bank Reconciliation):</strong> مطابقة رصيد البنك في الدفاتر مع كشف البنك.</li>
+          <li><strong>تحليل أعمار الديون (Aging of Accounts Receivable):</strong> تصنيف ذمم العملاء حسب مدة استحقاقها.</li>
+          <li><strong>الجداول المحورية (Pivot Tables):</strong> أداة تلخيص قوية تُنتج تقارير ديناميكية من آلاف الصفوف بنقرات.</li>
+          <li><strong>الحقول المحسوبة (Calculated Fields):</strong> إضافة معادلات داخل الجدول المحوري نفسه.</li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) جدول المحاكاة: تحليل أعمار ديون العملاء</h3>
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-file-excel"></i><span>Aging_Report.xlsx</span></div>
+          <div class="formula-bar"><div class="name-box">F2</div><div class="fx">fx</div><input value='=IF(E2<=0,"حالي",IF(E2<=30,"1-30",IF(E2<=60,"31-60",IF(E2<=90,"61-90","90+"))))' readonly></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">كود العميل</td><td class="header-cell">اسم العميل</td><td class="header-cell">رقم الفاتورة</td><td class="header-cell">تاريخ الفاتورة</td><td class="header-cell">عدد الأيام</td><td class="header-cell">الفئة العمرية</td><td class="header-cell">المبلغ</td></tr>
+                <tr><td class="row-num">2</td><td class="num">C001</td><td>شركة الأمل</td><td class="num">INV-101</td><td>2026/09/10</td><td class="num">2</td><td style="background:#d1fae5;color:#065f46;font-weight:600">حالي</td><td class="acc">$5,200.00</td></tr>
+                <tr><td class="row-num">3</td><td class="num">C002</td><td>مؤسسة النور</td><td class="num">INV-102</td><td>2026/08/25</td><td class="num">18</td><td style="background:#dbeafe;color:#1e40af;font-weight:600">1-30 يوم</td><td class="acc">$8,400.00</td></tr>
+                <tr><td class="row-num">4</td><td class="num">C003</td><td>شركة البركة</td><td class="num">INV-103</td><td>2026/08/05</td><td class="num">38</td><td style="background:#fef3c7;color:#92400e;font-weight:600">31-60 يوم</td><td class="acc">$12,000.00</td></tr>
+                <tr><td class="row-num">5</td><td class="num">C004</td><td>مجموعة الفجر</td><td class="num">INV-105</td><td>2026/07/01</td><td class="num">73</td><td style="background:#fed7aa;color:#9a3412;font-weight:600">61-90 يوم</td><td class="acc">$15,500.00</td></tr>
+                <tr><td class="row-num">6</td><td class="num">C005</td><td>شركة الوفاء</td><td class="num">INV-106</td><td>2026/05/15</td><td class="num">120</td><td style="background:#fee2e2;color:#991b1b;font-weight:600">90+ يوم</td><td class="acc">$9,200.00</td></tr>
+                <tr><td class="row-num">7</td><td colspan="6" style="text-align:center;font-weight:700;background:#e8f5e9">الإجمالي</td><td class="acc" style="font-weight:700;border-top:2px solid #000">$50,300.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Aging Report</span><span>Total Receivables: $50,300.00</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('07_Pivot_Financial_Reports.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 07_Pivot_Financial_Reports.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 8 ================= -->
+    <section id="axis8" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-emerald-600 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold">8</div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">استخدام الرسوم البيانية والتحليل المالي</h2>
+          <p class="text-sm text-slate-500">Charts & Financial Analysis | <span class="text-blue-600 font-bold">اليوم السادس - الجلسات 2+3</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          <strong>لوحة التحكم التنفيذية (Executive Dashboard)</strong> هي واجهة بصرية تجميعية تعرض أهم مؤشرات الأداء المالي (KPIs) لصنّاع القرار في صفحة واحدة.
+        </p>
+        <ul class="list-disc pr-6 space-y-2 text-slate-700">
+          <li><strong>صافي هامش الربح (Net Profit Margin):</strong> <code class="formula-chip">=صافي_الربح / الإيرادات × 100</code></li>
+          <li><strong>نسبة التداول (Current Ratio):</strong> <code class="formula-chip">=الأصول_المتداولة / الالتزامات_المتداولة</code></li>
+          <li><strong>العائد على الأصول (ROA):</strong> <code class="formula-chip">=صافي_الربح / إجمالي_الأصول × 100</code></li>
+          <li><strong>العائد على حقوق الملكية (ROE):</strong> <code class="formula-chip">=صافي_الربح / حقوق_الملكية × 100</code></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) محاكاة بصرية: لوحة مؤشرات الأداء</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div class="bg-white rounded-xl p-5 border-r-4 border-emerald-500 shadow">
+            <div class="text-xs text-slate-500 mb-1">صافي هامش الربح</div>
+            <div class="text-2xl font-bold text-slate-800">18.5%</div>
+            <div class="text-emerald-600 text-sm mt-1"><i class="fas fa-arrow-up"></i> +2.3%</div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border-r-4 border-cyan-500 shadow">
+            <div class="text-xs text-slate-500 mb-1">نسبة التداول</div>
+            <div class="text-2xl font-bold text-slate-800">2.15</div>
+            <div class="text-emerald-600 text-sm mt-1"><i class="fas fa-arrow-up"></i> +0.18</div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border-r-4 border-purple-500 shadow">
+            <div class="text-xs text-slate-500 mb-1">ROA</div>
+            <div class="text-2xl font-bold text-slate-800">9.2%</div>
+            <div class="text-red-600 text-sm mt-1"><i class="fas fa-arrow-down"></i> -0.5%</div>
+          </div>
+          <div class="bg-white rounded-xl p-5 border-r-4 border-orange-500 shadow">
+            <div class="text-xs text-slate-500 mb-1">ROE</div>
+            <div class="text-2xl font-bold text-slate-800">14.8%</div>
+            <div class="text-emerald-600 text-sm mt-1"><i class="fas fa-arrow-up"></i> +1.2%</div>
+          </div>
+        </div>
+
+        <div class="excel-wrap">
+          <div class="excel-ribbon"><i class="fas fa-chart-line"></i><span>Dashboard.xlsx - الإيرادات والمصروفات الشهرية</span></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">الشهر</td><td class="header-cell">الإيرادات</td><td class="header-cell">المصروفات</td><td class="header-cell">صافي الربح</td><td class="header-cell">هامش الربح %</td><td class="header-cell">الاتجاه</td></tr>
+                <tr><td class="row-num">2</td><td>يناير</td><td class="acc">$85,000</td><td class="acc">$68,000</td><td class="acc">$17,000</td><td class="num">20.0%</td><td class="text-emerald-600 font-bold">▲</td></tr>
+                <tr><td class="row-num">3</td><td>فبراير</td><td class="acc">$92,000</td><td class="acc">$71,000</td><td class="acc">$21,000</td><td class="num">22.8%</td><td class="text-emerald-600 font-bold">▲</td></tr>
+                <tr><td class="row-num">4</td><td>مارس</td><td class="acc">$78,000</td><td class="acc">$69,500</td><td class="acc">$8,500</td><td class="num">10.9%</td><td class="text-red-600 font-bold">▼</td></tr>
+                <tr><td class="row-num">5</td><td>أبريل</td><td class="acc">$105,000</td><td class="acc">$76,000</td><td class="acc">$29,000</td><td class="num">27.6%</td><td class="text-emerald-600 font-bold">▲</td></tr>
+                <tr><td class="row-num">6</td><td>مايو</td><td class="acc">$112,000</td><td class="acc">$80,000</td><td class="acc">$32,000</td><td class="num">28.6%</td><td class="text-emerald-600 font-bold">▲</td></tr>
+                <tr><td class="row-num">7</td><td style="font-weight:700;background:#e8f5e9">الإجمالي</td><td class="acc" style="font-weight:700;background:#e8f5e9">$472,000</td><td class="acc" style="font-weight:700;background:#e8f5e9">$364,500</td><td class="acc" style="font-weight:700;background:#e8f5e9">$107,500</td><td class="num" style="font-weight:700;background:#e8f5e9">22.8%</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="excel-status"><span>Dashboard</span><span>Slicers: Active | Timeline: 5 Months</span></div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('08_Interactive_Dashboard.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 08_Interactive_Dashboard.xlsx</a>
+      </div>
+    </section>
+
+    <!-- ================= AXIS 9 ================= -->
+    <section id="axis9" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6 fade-in border-2 border-emerald-500">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="bg-gradient-to-br from-emerald-500 to-green-700 text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold"><i class="fas fa-trophy"></i></div>
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800">مشروع التخرج: تطبيقات عملية على ملفات واقعية</h2>
+          <p class="text-sm text-slate-500">Capstone Project | <span class="text-amber-600 font-bold">اليوم السابع - كامل</span></p>
+        </div>
+      </div>
+
+      <div class="theory-box">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-book-reader ml-2"></i>(أ) الأساس النظري - سيناريو المشروع</h3>
+        <p class="text-slate-700 leading-loose mb-3">
+          ستقوم بتطبيق <strong>دورة محاسبية كاملة</strong> على شركة تجارية وهمية اسمها <strong>"شركة النجاح التجارية"</strong> تعمل بنظام الجرد المستمر،
+          خلال شهر تشغيلي كامل (يناير 2026).
+        </p>
+        <h4 class="font-bold text-slate-700 mt-4 mb-2">مراحل الدورة المحاسبية:</h4>
+        <ol class="list-decimal pr-6 space-y-2 text-slate-700">
+          <li><strong>أرصدة أول المدة:</strong> استلام ميزان المراجعة الافتتاحي في 01/01/2026.</li>
+          <li><strong>تسجيل 10 عمليات مالية متنوعة:</strong>
+            <ul class="list-disc pr-6 mt-1 space-y-1 text-sm">
+              <li>عملية 1: شراء بضاعة نقداً بقيمة 45,000 ريال.</li>
+              <li>عملية 2: شراء بضاعة آجلاً من المورد (أ) بقيمة 62,000 ريال.</li>
+              <li>عملية 3: مردودات مشتريات للمورد (أ) بقيمة 4,500 ريال.</li>
+              <li>عملية 4: بيع بضاعة نقداً بقيمة 85,000 ريال (تكلفتها 52,000).</li>
+              <li>عملية 5: بيع بضاعة آجلاً للعميل (ب) بقيمة 120,000 ريال (تكلفتها 78,000).</li>
+              <li>عملية 6: مردودات مبيعات من العميل (ب) بقيمة 8,000 ريال.</li>
+              <li>عملية 7: سداد رواتب الموظفين بقيمة 28,000 ريال.</li>
+              <li>عملية 8: شراء أثاث مكتبي بقيمة 35,000 ريال.</li>
+              <li>عملية 9: تحصيل جزء من مستحقات العميل (ب) بقيمة 60,000 ريال.</li>
+              <li>عملية 10: سداد جزء من مستحقات المورد (أ) بقيمة 40,000 ريال.</li>
+            </ul>
+          </li>
+          <li><strong>التسويات الجردية:</strong> إهلاك، مخصص ديون، إيرادات مستحقة، مصروفات مدفوعة مقدماً، تسوية المخزون.</li>
+          <li><strong>إعداد ميزان المراجعة بعد التسويات.</strong></li>
+          <li><strong>إقفال الحسابات المؤقتة.</strong></li>
+          <li><strong>إصدار القوائم المالية المعتمدة.</strong></li>
+        </ol>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="section-title text-lg font-bold text-emerald-800"><i class="fas fa-table ml-2"></i>(د) محاكي التدريب التفاعلي</h3>
+
+        <div class="bg-gradient-to-br from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-xl p-6 mb-4">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="bg-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fas fa-question"></i></div>
+            <h4 class="text-lg font-bold text-emerald-900">المشكلة التدريبية - العملية رقم 5</h4>
+          </div>
+          <p class="text-slate-700 leading-loose mb-3">
+            <strong>بيان العملية:</strong> في 20/01/2026، باعت شركة النجاح التجارية بضاعة آجلاً إلى العميل (ب) بقيمة <strong>120,000 ريال</strong>،
+            علماً بأن تكلفة هذه البضاعة <strong>78,000 ريال</strong> (نظام الجرد المستمر).
+          </p>
+          <p class="text-slate-700 leading-loose mb-3">
+            <strong>المطلوب:</strong> سجّل القيد المحاسبي الصحيح لهذه العملية، ثم اضغط على "عرض الحل النموذجي" للمقارنة مع الحل المعتمد من المدرب عبدالرحمن خليل.
+          </p>
+        </div>
+
+        <div class="excel-wrap mb-4">
+          <div class="excel-ribbon"><i class="fas fa-edit"></i><span>مساحة حل الطالب - العملية #5</span></div>
+          <div class="excel-grid">
+            <table>
+              <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr></thead>
+              <tbody>
+                <tr><td class="row-num">1</td><td class="header-cell">التاريخ</td><td class="header-cell">رقم القيد</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">البيان</td><td class="header-cell">مدين</td><td class="header-cell">دائن</td></tr>
+                <tr><td class="row-num">2</td><td><input type="date" class="border px-2 py-1 rounded w-full text-sm" value="2026-01-20"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="JV-###"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="كود"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="اسم الحساب"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="البيان"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td></tr>
+                <tr><td class="row-num">3</td><td></td><td></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="كود"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="اسم الحساب"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="البيان"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td></tr>
+                <tr><td class="row-num">4</td><td><input type="date" class="border px-2 py-1 rounded w-full text-sm" value="2026-01-20"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="JV-###"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="كود"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="اسم الحساب"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="البيان"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td></tr>
+                <tr><td class="row-num">5</td><td></td><td></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="كود"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="اسم الحساب"></td><td><input type="text" class="border px-2 py-1 rounded w-full text-sm" placeholder="البيان"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td><td><input type="number" class="border px-2 py-1 rounded w-full text-sm" placeholder="0"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="flex gap-3 mb-4">
+          <button onclick="showSolution()" class="download-btn"><i class="fas fa-eye"></i> عرض الحل النموذجي</button>
+          <button onclick="hideSolution()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-5 py-2 rounded-lg font-bold transition"><i class="fas fa-eye-slash"></i> إخفاء الحل</button>
+        </div>
+
+        <div id="solution" class="hidden">
+          <div class="bg-emerald-50 border-2 border-emerald-300 rounded-xl p-4 mb-3">
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-check-circle text-emerald-600 text-xl"></i>
+              <h4 class="font-bold text-emerald-900">الحل النموذجي المعتمد من المدرب عبدالرحمن خليل</h4>
+            </div>
+            <p class="text-sm text-slate-700">يتكون الحل من <strong>قيدين محاسبيين</strong> وفق نظام الجرد المستمر:</p>
+          </div>
+
+          <div class="excel-wrap">
+            <div class="excel-ribbon"><i class="fas fa-check-double"></i><span>الحل النموذجي - العملية #5</span></div>
+            <div class="excel-grid">
+              <table>
+                <thead><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr></thead>
+                <tbody>
+                  <tr><td class="row-num">1</td><td class="header-cell">التاريخ</td><td class="header-cell">رقم القيد</td><td class="header-cell">كود الحساب</td><td class="header-cell">اسم الحساب</td><td class="header-cell">البيان</td><td class="header-cell">مدين</td><td class="header-cell">دائن</td></tr>
+                  <tr><td class="row-num">2</td><td colspan="7" style="background:#dbeafe;font-weight:700;text-align:center">القيد الأول: إثبات المبيعات الآجلة</td></tr>
+                  <tr><td class="row-num">3</td><td>2026/01/20</td><td class="num">JV-005a</td><td class="num">1300</td><td>الذمم المدينة - عميل (ب)</td><td>بيع بضاعة آجلاً</td><td class="acc">$120,000.00</td><td></td></tr>
+                  <tr><td class="row-num">4</td><td></td><td></td><td class="num">4100</td><td>إيرادات المبيعات</td><td>بيع بضاعة آجلاً</td><td></td><td class="acc">$120,000.00</td></tr>
+                  <tr><td class="row-num">5</td><td colspan="7" style="background:#fef3c7;font-weight:700;text-align:center">القيد الثاني: إثبات تكلفة المبيعات (الجرد المستمر)</td></tr>
+                  <tr><td class="row-num">6</td><td>2026/01/20</td><td class="num">JV-005b</td><td class="num">5050</td><td>تكلفة المبيعات</td><td>تكلفة البضاعة المباعة</td><td class="acc">$78,000.00</td><td></td></tr>
+                  <tr><td class="row-num">7</td><td></td><td></td><td class="num">1400</td><td>المخزون</td><td>خروج بضاعة من المخزون</td><td></td><td class="acc">$78,000.00</td></tr>
+                  <tr><td class="row-num">8</td><td colspan="5" style="text-align:center;font-weight:700;background:#d1fae5">الإجمالي والتحقق</td><td class="acc" style="font-weight:700;background:#d1fae5">$198,000.00</td><td class="acc" style="font-weight:700;background:#d1fae5">$198,000.00</td></tr>
+                  <tr><td class="row-num">9</td><td colspan="5" style="text-align:center;font-weight:700;color:#065f46;background:#d1fae5">✓ القيدان متزنان</td><td colspan="2" style="text-align:center;font-weight:700;color:#065f46;background:#d1fae5">متزن ✔</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#" onclick="downloadFile('09_Case_Study_Exercise.xlsx');return false;" class="download-btn"><i class="fas fa-download"></i> تحميل: 09_Case_Study_Exercise.xlsx</a>
+        <a href="#" onclick="downloadFile('09_Case_Study_Solved_Master.xlsx');return false;" class="download-btn" style="background:linear-gradient(135deg,#059669,#047857)"><i class="fas fa-download"></i> تحميل: 09_Case_Study_Solved_Master.xlsx</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-8 mt-8 shadow-xl">
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="bg-emerald-500/20 p-3 rounded-xl"><i class="fas fa-file-excel text-2xl text-emerald-300"></i></div>
+            <div>
+              <h3 class="text-xl font-bold">منصة المحاسبة الاحترافية</h3>
+              <p class="text-sm text-emerald-200">باستخدام Microsoft Excel</p>
+            </div>
+          </div>
+          <p class="text-slate-300 leading-relaxed text-sm">
+            منصة تعليمية تفاعلية شاملة لإتقان المحاسبة باستخدام Excel، من إعداد وتقديم <strong class="text-emerald-300">الأستاذ عبدالرحمن خليل</strong>،
+            موزّعة على 7 أيام تدريبية بمعدل ساعة ونصف يومياً.
+          </p>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="bg-white/10 hover:bg-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="bg-white/10 hover:bg-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="bg-white/10 hover:bg-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center transition"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="bg-white/10 hover:bg-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="bg-white/10 hover:bg-emerald-500 w-10 h-10 rounded-lg flex items-center justify-center transition"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-emerald-300"><i class="fas fa-calendar-week ml-2"></i>الأيام التدريبية</h4>
+          <ul class="space-y-1 text-sm text-slate-300">
+            <li><a href="#schedule" class="hover:text-emerald-300">ي1: الأساسيات</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي2: الدوال</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي3: اليومية</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي4: المراجعة</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي5: القوائم</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي6: التحليل</a></li>
+            <li><a href="#schedule" class="hover:text-emerald-300">ي7: التخرج</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-3 text-emerald-300"><i class="fas fa-headset ml-2"></i>الدعم الأكاديمي</h4>
+          <ul class="space-y-1 text-sm text-slate-300">
+            <li><i class="fas fa-envelope ml-2 text-emerald-400"></i>abdulrahman@accounting.pro</li>
+            <li><i class="fas fa-phone ml-2 text-emerald-400"></i> +966 5X XXX XXXX</li>
+            <li><i class="fas fa-globe ml-2 text-emerald-400"></i> www.abdulrahman-khalil.com</li>
+            <li><i class="fas fa-map-marker-alt ml-2 text-emerald-400"></i> المملكة العربية السعودية</li>
+          </ul>
+          <div class="mt-4 bg-emerald-500/20 rounded-lg p-3">
+            <div class="text-xs text-emerald-200">للتواصل المباشر</div>
+            <a href="#" class="font-bold text-emerald-300 hover:text-white text-sm"><i class="fab fa-whatsapp ml-1"></i>واتساب المدرب</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-6 pt-4 text-center text-sm text-slate-400">
+        <p>© 2026 جميع الحقوق محفوظة - منصة المحاسبة الاحترافية | إعداد وتقديم <strong class="text-emerald-300">أ. عبدالرحمن خليل</strong></p>
+        <p class="mt-1 text-xs">7 أيام تدريبية | 10.5 ساعة | 9 محاور | شهادة إتمام معتمدة</p>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<div class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+function switchSim(id, btn){
+  const parent = btn.parentElement;
+  const container = parent.parentElement;
+  parent.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  container.querySelectorAll('.excel-wrap').forEach(w=>w.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+<script src="excel_generator.js"></script>
+<script>
+function showSolution(){document.getElementById('solution').classList.remove('hidden');}
+function hideSolution(){document.getElementById('solution').classList.add('hidden');}
+
+const navItems = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    const top = s.offsetTop - 150;
+    if(scrollY >= top) current = s.id;
+  });
+  navItems.forEach(n=>{
+    n.classList.remove('active');
+    if(n.dataset.target === current) n.classList.add('active');
+  });
+});
+
+navItems.forEach(n=>{
+  n.addEventListener('click',(e)=>{
+    e.preventDefault();
+    const target = document.getElementById(n.dataset.target);
+    if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".daysSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      }
+    }
+  });
+</script>
+</body>
+</html>
